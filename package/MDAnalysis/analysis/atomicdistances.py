@@ -67,29 +67,14 @@ This example uses files from the MDAnalysis test suite
 
 We will calculate the distances between an atom group of atoms 101-105
 and an atom group of atoms 4001-4005 with periodic boundary conditions.
-To select these atoms:
-
-   .. testsetup::
-
-     import MDAnalysis as mda
-     from MDAnalysis.tests.datafiles import GRO, XTC
-     import MDAnalysis.analysis.atomicdistances as ad
+To select these atoms: ::
 
    >>> u = mda.Universe(GRO, XTC)
    >>> ag1 = u.atoms[100:105]
    >>> ag2 = u.atoms[4000:4005]
 
 We can run the calculations using any variable of choice such as
-``my_dists`` and access our results using ``my_dists.results``:
-
-   .. testsetup::
-
-     import MDAnalysis as mda
-     from MDAnalysis.tests.datafiles import GRO, XTC
-     import MDAnalysis.analysis.atomicdistances as ad
-     u = mda.Universe(GRO, XTC)
-     ag1 = u.atoms[100:105]
-     ag2 = u.atoms[4000:4005]
+``my_dists`` and access our results using ``my_dists.results``: ::
 
    >>> my_dists = ad.AtomicDistances(ag1, ag2).run()
    >>> my_dists.results
@@ -106,16 +91,7 @@ We can run the calculations using any variable of choice such as
 
 To do the computation without periodic boundary conditions, we can enter
 the keyword argument ``pbc=False`` after ``ag2``. The result is different
-in this case:
-
-    .. testsetup::
-
-       import MDAnalysis as mda
-       from MDAnalysis.tests.datafiles import GRO, XTC
-       import MDAnalysis.analysis.atomicdistances as ad
-       u = mda.Universe(GRO, XTC)
-       ag1 = u.atoms[100:105]
-       ag2 = u.atoms[4000:4005]
+in this case: ::
 
    >>> my_dists_nopbc = ad.AtomicDistances(ag1, ag2, pbc=False).run()
    >>> my_dists_nopbc.results
