@@ -54,7 +54,6 @@ include-package-data = true
 
 [tool.setuptools.packages.find]
 namespaces = false
-where = "."
 
 [tool.setuptools.package-data]
 MDAnalysisTests = [
