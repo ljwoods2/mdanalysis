@@ -233,6 +233,74 @@ else:
     HAS_H5PY = True
 
 
+class H5MDElement:
+    """Convenience class for accessing an H5MD Element.
+
+    Fixed step and time storage will be converted to explicit
+    time and step storage for consistency.
+    """
+
+    def __init__(self, root):
+        self.root = root
+
+        self._t_dependent = True
+
+        if "value" in self.root:
+            self.value = self.root["value"]
+            self.valueunit = self.value.attrs.get("unit", None)
+        else:
+            raise NoDataError(
+                "No 'value' dataset found in H5MD element " + f"{self.root.name}"
+            )
+
+        # Ensure that self.step = None for time independent datasets
+        self.step = None
+        if "step" in self.root:
+            step = self.root["step"]
+            if step.shape == ():
+                self.step = self._convert_to_explicit(step)
+            else:
+                self.step = step
+        else:
+            self._t_dependent = False
+
+        # Time is always optional in H5MD
+        self.time = None
+        self.timeunit = None
+        if "time" in self.root:
+            if not self._t_dependent:
+                raise ValueError(
+                    f"Dataset {self.root.name} has a time dataset but no step dataset"
+                )
+            time = self.root["time"]
+            if time.shape == ():
+                self.time = self._convert_to_explicit(self.root["time"])
+            else:
+                self.time = time
+
+            if "unit" in self.root["time"].attrs:
+                self.timeunit = self.root["time"].attrs["unit"]
+
+        # Allows reader to check if dataset has data at a given frame
+        self.step_set = set(self.step) if self._t_dependent else None
+
+    def _convert_to_explicit(self, dset):
+        """Converts a fixed step dataset to explicit step storage.
+
+        A consequence of this is that fixed step & time datasets will be
+        loaded into memory"""
+        offset = 0
+        if "offset" in dset.attrs:
+            offset = dset.attrs["offset"]
+
+        l = self.root.value.shape[0]
+        stop = offset + (l * dset[()])
+        return np.arange(offset, stop, dset[()])
+
+    def is_t_dependent(self):
+        return self._t_dependent
+
+
 class H5MDReader(base.ReaderBase):
     r"""Reader for the H5MD format.
 
@@ -455,7 +523,8 @@ class H5MDReader(base.ReaderBase):
         self._open_trajectory(group)
         # Position, velocity, and force groups
         self._xvf = dict()
-        # Special group for box
+        # Special var for edges
+        # This remains "None" if the boundary condition is "none"
         self._dim = None
         # Observables group
         self._obsv = dict()
@@ -481,13 +550,14 @@ class H5MDReader(base.ReaderBase):
 
         self.units = {"time": None, "length": None, "velocity": None, "force": None}
         self._set_translated_units()  # fills units dictionary
+        self._construct_unique_steplist()
         self._read_next_timestep()
 
     def _resolve_elements(self):
         # Check for position, velocity, and force groups
         for group in ["position", "velocity", "force"]:
-            if group in self._particle_group:
-                self._xvf[group] = self._particle_group[group]
+            if group in self._traj_grp:
+                self._xvf[group] = H5MDElement(self._traj_grp[group])
         if not self._xvf:
             raise NoDataError(
                 "Provide at least a position, velocity"
@@ -497,21 +567,21 @@ class H5MDReader(base.ReaderBase):
         # Check for observables group
         if "observables" in self._file:
             for key in self._file["observables"]:
-                self._obsv[key] = self._file["observables"][key]
-        elif "observables" in self._particle_group:
-            for key in self._file["observables"]:
-                self._obsv[key] = self._file["observables"][key]
+                self._obsv[key] = H5MDElement(self._file["observables"][key])
+        elif "observables" in self._traj_grp:
+            for key in self._traj_grp["observables"]:
+                self._obsv[key] = H5MDElement(self._file["observables"][key])
 
         # Check for box group
-        if "box" in self._particle_group:
-            if self._particle_group["box"].attrs["dimension"] != 3:
+        if "box" in self._traj_grp:
+            if self._traj_grp["box"].attrs["dimension"] != 3:
                 raise ValueError(
                     "MDAnalysis only supports 3-dimensional" " simulation boxes"
                 )
             # edges is just a placeholder value when the
             # boundary condition is "none"
-            if self._particle_group["box"].attrs("boundary") == "periodic":
-                self._dim = self._particle_group["box"]["edges"]
+            if self._traj_grp["box"].attrs("boundary") == "periodic":
+                self._dim = H5MDElement(self._traj_grp["box"]["edges"])
 
     def _set_translated_units(self):
         """converts units from H5MD to MDAnalysis notation
@@ -539,47 +609,45 @@ class H5MDReader(base.ReaderBase):
         # first available parent group - either position, velocity, or force
         if unit == "time":
             for key in self._xvf:
-                if "unit" in self._xvf[key]["time"].attrs:
+                if self._xvf[key].timeunit is not None:
                     try:
                         self.units["time"] = self._unit_translation["time"][
-                            self._xvf[key]["time"].attrs["unit"]
+                            self._xvf[key].timeunit
                         ]
                         break
                     except KeyError:
                         raise RuntimeError(
                             errmsg.format(
                                 unit,
-                                self._particle_group[name]["time"].attrs["unit"],
+                                self._xvf[key].timeunit,
                             )
                         ) from None
 
         else:
-            if self._has[group]:
-                if "unit" in self._particle_group[group]["value"].attrs:
+            if group in self._xvf:
+                if self._xvf[group].valueunit is not None:
                     try:
                         self.units[unit] = self._unit_translation[unit][
-                            self._particle_group[group]["value"].attrs["unit"]
+                            self._xvf[group].valueunit
                         ]
                     except KeyError:
                         raise RuntimeError(
-                            errmsg.format(
-                                unit, self._particle_group[group]["value"].attrs["unit"]
-                            )
+                            errmsg.format(unit, self._xvf[group].valueunit)
                         ) from None
 
             # if position group is not provided, can still get 'length' unit
             # from unitcell box
-            if (not self._has["position"]) and ("edges" in self._particle_group["box"]):
-                if "unit" in self._particle_group["box/edges/value"].attrs:
+            if ("position" not in self._xvf) and (self._dim):
+                if self._dim.valueunit is not None:
                     try:
                         self.units["length"] = self._unit_translation["length"][
-                            self._particle_group["box/edges/value"].attrs["unit"]
+                            self._dim.valueunit
                         ]
                     except KeyError:
                         raise RuntimeError(
                             errmsg.format(
                                 unit,
-                                self._particle_group["box/edges/value"].attrs["unit"],
+                                self._dim.valueunit,
                             )
                         ) from None
 
@@ -599,9 +667,24 @@ class H5MDReader(base.ReaderBase):
                 raise ValueError(errmsg)
 
         else:
-            if self._has[group]:
+            if group in self._xvf:
                 if self.units[unit] is None:
                     raise ValueError(errmsg)
+
+    def _construct_unique_steplist(self):
+        """Constructs a list of unique steps from the H5MD file
+
+        reader[frame] will return a timestep filled with
+        data from all elements that contain data at self._step_list[frame]"""
+
+        elements = [element for element in self._xvf.values()]
+        elements.extend(element for element in self._obsv.values())
+        # Dimension must be hard linked to positions (if present)
+        # so it will not give unique farmes
+        all_elem_steps = tuple(
+            element.step for element in elements if element.is_t_dependent()
+        )
+        self._step_list = np.unique(np.concatenate(all_elem_steps))
 
     @staticmethod
     def _format_hint(thing):
@@ -611,18 +694,33 @@ class H5MDReader(base.ReaderBase):
         return HAS_H5PY and isinstance(thing, h5py.File)
 
     @staticmethod
-    def parse_n_atoms(filename):
-        with h5py.File(filename, "r") as f:
-            for group in f["particles/trajectory"]:
-                if group in ("position", "velocity", "force"):
-                    n_atoms = f[f"particles/trajectory/{group}/value"].shape[1]
-                    return n_atoms
+    def parse_n_atoms(filename, group=None):
+        """Obtain the number of atoms from the H5MD file.
 
-            raise NoDataError(
+        Only attempt this if there is exactly one group in the '/particles',
+        otherwise raise an error.
+        """
+        with h5py.File(filename, "r") as f:
+            if len(f["particles"]) == 1 or group is not None:
+                trj_group = (
+                    f["particles"][group]
+                    if group is not None
+                    else list(f["particles"])[0]
+                )
+                for group in ("position", "velocity", "force"):
+                    if group in trj_group:
+                        n_atoms = trj_group[group].shape[1]
+                        return n_atoms
+                raise NoDataError(
+                    "Could not construct minimal topology from the "
+                    "H5MD trajectory file, as it did not contain a "
+                    "'position', 'velocity', or 'force' group. "
+                    "You must include a topology file."
+                )
+            raise RuntimeError(
                 "Could not construct minimal topology from the "
-                "H5MD trajectory file, as it did not contain a "
-                "'position', 'velocity', or 'force' group. "
-                "You must include a topology file."
+                "H5MD trajectory file, as the `group' kwarg "
+                "was not provided "
             )
 
     def _open_trajectory(self, group):
@@ -669,39 +767,28 @@ class H5MDReader(base.ReaderBase):
     @property
     def n_frames(self):
         """number of frames in trajectory"""
-        for name, value in self._has.items():
-            if value:
-                return self._particle_group[name]["value"].shape[0]
+        return len(self._step_list)
 
     def _read_frame(self, frame):
         """reads data from h5md file and copies to current timestep"""
         try:
-            for name, value in self._has.items():
-                if value:
-                    _ = self._particle_group[name]["step"][frame]
-                    break
-            else:
-                raise NoDataError(
-                    "Provide at least a position, velocity"
-                    " or force group in the h5md file."
-                )
+            step = self._step_list[frame]
         except (ValueError, IndexError):
             raise IOError from None
 
         self._frame = frame
         ts = self.ts
-        particle_group = self._particle_group
         ts.frame = frame
 
         # fills data dictionary from 'observables' group
         # Note: dt is not read into data as it is not decided whether
         # Timestep should have a dt attribute (see Issue #2825)
-        self._copy_to_data()
+        self._copy_to_data(step)
 
         # Sets frame box dimensions
         # Note: H5MD files must contain 'box' group in each 'particles' group
-        if "edges" in particle_group["box"]:
-            edges = particle_group["box/edges/value"][frame, :]
+        if self._dim:
+            edges = self._dim.value[step, :]
             # A D-dimensional vector or a D × D matrix, depending on the
             # geometry of the box, of Float or Integer type. If edges is a
             # vector, it specifies the space diagonal of a cuboid-shaped box.
@@ -716,24 +803,23 @@ class H5MDReader(base.ReaderBase):
 
         # set the timestep positions, velocities, and forces with
         # current frame dataset
-        if self._has["position"]:
-            self._read_dataset_into_ts("position", ts.positions)
-        if self._has["velocity"]:
-            self._read_dataset_into_ts("velocity", ts.velocities)
-        if self._has["force"]:
-            self._read_dataset_into_ts("force", ts.forces)
+        if "position" in self._xvf:
+            self._read_dataset_into_ts("position", ts.positions, step)
+        if "velocity" in self._xvf:
+            self._read_dataset_into_ts("velocity", ts.velocities, step)
+        if "force" in self._xvf:
+            self._read_dataset_into_ts("force", ts.forces, step)
 
         if self.convert_units:
             self._convert_units()
 
         return ts
 
-    def _copy_to_data(self):
+    def _copy_to_data(self, step):
         """assigns values to keys in data dictionary"""
 
-        if "observables" in self._file:
-            for key in self._file["observables"].keys():
-                self.ts.data[key] = self._file["observables"][key]["value"][self._frame]
+        for key, element in self._obsv.items():
+            self.ts.data[key] = element.value[step]
 
         # pulls 'time' and 'step' out of first available parent group
         for name, value in self._has.items():
