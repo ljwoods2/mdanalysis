@@ -1,0 +1,1357 @@
+Using pip 25.1.1 from /home/lwoods/miniconda3/envs/tmp/lib/python3.11/site-packages/pip (python 3.11)
+Processing /home/lwoods/workspace/mdanalysis/package
+  Installing build dependencies: started
+  Running command pip subprocess to install build dependencies
+  Using pip 25.1.1 from /home/lwoods/miniconda3/envs/tmp/lib/python3.11/site-packages/pip (python 3.11)
+  Collecting Cython<3.1,>=0.28
+    Obtaining dependency information for Cython<3.1,>=0.28 from https://files.pythonhosted.org/packages/6b/7f/c57791ba6a1c934b6f1ab51371e894e3b4bfde0bc35e50046c8754a9d215/Cython-3.0.12-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+    Using cached Cython-3.0.12-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.3 kB)
+  Collecting packaging
+    Obtaining dependency information for packaging from https://files.pythonhosted.org/packages/20/12/38679034af332785aac8774540895e234f4d07f7545804097de4b666afd8/packaging-25.0-py3-none-any.whl.metadata
+    Using cached packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+    Link requires a different Python (3.11.13 not in: '>=3.7,<3.11'): https://files.pythonhosted.org/packages/3a/be/650f9c091ef71cb01d735775d554e068752d3ff63d7943b26316dc401749/numpy-1.21.2.zip (from https://pypi.org/simple/numpy/) (requires-python:>=3.7,<3.11)
+    Link requires a different Python (3.11.13 not in: '>=3.7,<3.11'): https://files.pythonhosted.org/packages/5f/d6/ad58ded26556eaeaa8c971e08b6466f17c4ac4d786cd3d800e26ce59cc01/numpy-1.21.3.zip (from https://pypi.org/simple/numpy/) (requires-python:>=3.7,<3.11)
+    Link requires a different Python (3.11.13 not in: '>=3.7,<3.11'): https://files.pythonhosted.org/packages/fb/48/b0708ebd7718a8933f0d3937513ef8ef2f4f04529f1f66ca86d873043921/numpy-1.21.4.zip (from https://pypi.org/simple/numpy/) (requires-python:>=3.7,<3.11)
+    Link requires a different Python (3.11.13 not in: '>=3.7,<3.11'): https://files.pythonhosted.org/packages/c2/a8/a924a09492bdfee8c2ec3094d0a13f2799800b4fdc9c890738aeeb12c72e/numpy-1.21.5.zip (from https://pypi.org/simple/numpy/) (requires-python:>=3.7,<3.11)
+    Link requires a different Python (3.11.13 not in: '>=3.7,<3.11'): https://files.pythonhosted.org/packages/45/b7/de7b8e67f2232c26af57c205aaad29fe17754f793404f59c8a730c7a191a/numpy-1.21.6.zip (from https://pypi.org/simple/numpy/) (requires-python:>=3.7,<3.11)
+  Collecting numpy>=2.0.0
+    Obtaining dependency information for numpy>=2.0.0 from https://files.pythonhosted.org/packages/0a/92/0528a563dfc2cdccdcb208c0e241a4bb500d7cde218651ffb834e8febc50/numpy-2.3.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata
+    Using cached numpy-2.3.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (62 kB)
+  Collecting setuptools>=40.9.0
+    Obtaining dependency information for setuptools>=40.9.0 from https://files.pythonhosted.org/packages/a3/dc/17031897dae0efacfea57dfd3a82fdd2a2aeb58e0ff71b77b87e44edc772/setuptools-80.9.0-py3-none-any.whl.metadata
+    Using cached setuptools-80.9.0-py3-none-any.whl.metadata (6.6 kB)
+  Collecting wheel
+    Obtaining dependency information for wheel from https://files.pythonhosted.org/packages/0b/2c/87f3254fd8ffd29e4c02732eee68a83a1d3c346ae39bc6822dcbcb697f2b/wheel-0.45.1-py3-none-any.whl.metadata
+    Using cached wheel-0.45.1-py3-none-any.whl.metadata (2.3 kB)
+  Using cached Cython-3.0.12-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.6 MB)
+  Using cached packaging-25.0-py3-none-any.whl (66 kB)
+  Using cached numpy-2.3.0-cp311-cp311-manylinux_2_28_x86_64.whl (16.9 MB)
+  Using cached setuptools-80.9.0-py3-none-any.whl (1.2 MB)
+  Using cached wheel-0.45.1-py3-none-any.whl (72 kB)
+  Installing collected packages: wheel, setuptools, packaging, numpy, Cython
+    Creating /tmp/pip-build-env-t82x0xb6/overlay/bin
+    changing mode of /tmp/pip-build-env-t82x0xb6/overlay/bin/wheel to 755
+    changing mode of /tmp/pip-build-env-t82x0xb6/overlay/bin/f2py to 755
+    changing mode of /tmp/pip-build-env-t82x0xb6/overlay/bin/numpy-config to 755
+    changing mode of /tmp/pip-build-env-t82x0xb6/overlay/bin/cygdb to 755
+    changing mode of /tmp/pip-build-env-t82x0xb6/overlay/bin/cython to 755
+    changing mode of /tmp/pip-build-env-t82x0xb6/overlay/bin/cythonize to 755
+
+  Successfully installed Cython-3.0.12 numpy-2.3.0 packaging-25.0 setuptools-80.9.0 wheel-0.45.1
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Running command Getting requirements to build wheel
+  performance hint: MDAnalysis/lib/nsgrid.pyx:417:37: Exception check after calling 'coord2cellid' will always require the GIL to be acquired. Declare 'coord2cellid' as 'noexcept' if you control the definition and you're sure you don't want the function to raise exceptions.
+  performance hint: MDAnalysis/lib/nsgrid.pyx:431:26: Exception check after calling 'coord2cellxyz' will always require the GIL to be acquired.
+  Possible solutions:
+        1. Declare 'coord2cellxyz' as 'noexcept' if you control the definition and you're sure you don't want the function to raise exceptions.
+        2. Use an 'int' return type on 'coord2cellxyz' to allow an error code to be returned.
+  performance hint: MDAnalysis/lib/nsgrid.pyx:559:34: Exception check after calling 'coord2cellxyz' will always require the GIL to be acquired.
+  Possible solutions:
+        1. Declare 'coord2cellxyz' as 'noexcept' if you control the definition and you're sure you don't want the function to raise exceptions.
+        2. Use an 'int' return type on 'coord2cellxyz' to allow an error code to be returned.
+  performance hint: MDAnalysis/lib/nsgrid.pyx:567:56: Exception check after calling 'cellxyz2cellid' will always require the GIL to be acquired. Declare 'cellxyz2cellid' as 'noexcept' if you control the definition and you're sure you don't want the function to raise exceptions.
+  performance hint: MDAnalysis/lib/nsgrid.pyx:574:53: Exception check after calling 'calc_distsq' will always require the GIL to be acquired. Declare 'calc_distsq' as 'noexcept' if you control the definition and you're sure you don't want the function to raise exceptions.
+  performance hint: MDAnalysis/lib/nsgrid.pyx:578:57: Exception check after calling 'add_neighbors' will always require the GIL to be acquired.
+  Possible solutions:
+        1. Declare 'add_neighbors' as 'noexcept' if you control the definition and you're sure you don't want the function to raise exceptions.
+        2. Use an 'int' return type on 'add_neighbors' to allow an error code to be returned.
+  performance hint: MDAnalysis/lib/c_distances.pyx:275:5: Exception check on '_minimum_image_orthogonal' will always require the GIL to be acquired.
+  Possible solutions:
+        1. Declare '_minimum_image_orthogonal' as 'noexcept' if you control the definition and you're sure you don't want the function to raise exceptions.
+        2. Use an 'int' return type on '_minimum_image_orthogonal' to allow an error code to be returned.
+  performance hint: MDAnalysis/lib/c_distances.pyx:302:5: Exception check on '_minimum_image_triclinic' will always require the GIL to be acquired.
+  Possible solutions:
+        1. Declare '_minimum_image_triclinic' as 'noexcept' if you control the definition and you're sure you don't want the function to raise exceptions.
+        2. Use an 'int' return type on '_minimum_image_triclinic' to allow an error code to be returned.
+  performance hint: MDAnalysis/lib/c_distances.pyx:390:37: Exception check after calling '__pyx_fuse_0_minimum_image_orthogonal' will always require the GIL to be acquired.
+  Possible solutions:
+        1. Declare '__pyx_fuse_0_minimum_image_orthogonal' as 'noexcept' if you control the definition and you're sure you don't want the function to raise exceptions.
+        2. Use an 'int' return type on '__pyx_fuse_0_minimum_image_orthogonal' to allow an error code to be returned.
+  performance hint: MDAnalysis/lib/c_distances.pyx:390:37: Exception check after calling '__pyx_fuse_1_minimum_image_orthogonal' will always require the GIL to be acquired.
+  Possible solutions:
+        1. Declare '__pyx_fuse_1_minimum_image_orthogonal' as 'noexcept' if you control the definition and you're sure you don't want the function to raise exceptions.
+        2. Use an 'int' return type on '__pyx_fuse_1_minimum_image_orthogonal' to allow an error code to be returned.
+  performance hint: MDAnalysis/lib/c_distances.pyx:414:36: Exception check after calling '__pyx_fuse_0_minimum_image_triclinic' will always require the GIL to be acquired.
+  Possible solutions:
+        1. Declare '__pyx_fuse_0_minimum_image_triclinic' as 'noexcept' if you control the definition and you're sure you don't want the function to raise exceptions.
+        2. Use an 'int' return type on '__pyx_fuse_0_minimum_image_triclinic' to allow an error code to be returned.
+  performance hint: MDAnalysis/lib/c_distances.pyx:414:36: Exception check after calling '__pyx_fuse_1_minimum_image_triclinic' will always require the GIL to be acquired.
+  Possible solutions:
+        1. Declare '__pyx_fuse_1_minimum_image_triclinic' as 'noexcept' if you control the definition and you're sure you don't want the function to raise exceptions.
+        2. Use an 'int' return type on '__pyx_fuse_1_minimum_image_triclinic' to allow an error code to be returned.
+  Attempting to autodetect OpenMP support... Compiler supports OpenMP
+  Will attempt to use Cython.
+  Compiling MDAnalysis/lib/formats/libdcd.pyx because it depends on /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/Cython/Includes/libc/string.pxd.
+  Compiling MDAnalysis/lib/c_distances.pyx because it depends on /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/Cython/Includes/libc/string.pxd.
+  Compiling MDAnalysis/lib/c_distances_openmp.pyx because it depends on /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/Cython/Includes/libc/string.pxd.
+  Compiling MDAnalysis/lib/qcprot.pyx because it depends on /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/Cython/Includes/libc/string.pxd.
+  Compiling MDAnalysis/lib/formats/libmdaxdr.pyx because it depends on /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/Cython/Includes/libc/string.pxd.
+  Compiling MDAnalysis/lib/formats/cython_util.pyx because it depends on /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/Cython/Includes/libc/string.pxd.
+  Compiling MDAnalysis/analysis/encore/cutils.pyx because it depends on /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/Cython/Includes/libc/string.pxd.
+  Compiling MDAnalysis/analysis/encore/clustering/affinityprop.pyx because it depends on /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/Cython/Includes/libc/string.pxd.
+  Compiling MDAnalysis/analysis/encore/dimensionality_reduction/stochasticproxembed.pyx because it depends on /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/Cython/Includes/libc/string.pxd.
+  Compiling MDAnalysis/lib/_cutil.pyx because it depends on /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/Cython/Includes/libc/string.pxd.
+  Compiling MDAnalysis/lib/_augment.pyx because it depends on /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/Cython/Includes/libc/string.pxd.
+  Compiling MDAnalysis/lib/nsgrid.pyx because it depends on /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/Cython/Includes/libc/__init__.pxd.
+  Compiling MDAnalysis/coordinates/timestep.pyx because it depends on /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/Cython/Includes/libc/string.pxd.
+  [ 1/13] Cythonizing MDAnalysis/lib/nsgrid.pyx
+  [ 2/13] Cythonizing MDAnalysis/analysis/encore/clustering/affinityprop.pyx
+  [ 3/13] Cythonizing MDAnalysis/analysis/encore/cutils.pyx
+  [ 4/13] Cythonizing MDAnalysis/analysis/encore/dimensionality_reduction/stochasticproxembed.pyx
+  [ 5/13] Cythonizing MDAnalysis/coordinates/timestep.pyx
+  [ 6/13] Cythonizing MDAnalysis/lib/_augment.pyx
+  [ 7/13] Cythonizing MDAnalysis/lib/_cutil.pyx
+  [ 8/13] Cythonizing MDAnalysis/lib/c_distances.pyx
+  [ 9/13] Cythonizing MDAnalysis/lib/c_distances_openmp.pyx
+  [10/13] Cythonizing MDAnalysis/lib/formats/cython_util.pyx
+  [11/13] Cythonizing MDAnalysis/lib/formats/libdcd.pyx
+  [12/13] Cythonizing MDAnalysis/lib/formats/libmdaxdr.pyx
+  [13/13] Cythonizing MDAnalysis/lib/qcprot.pyx
+  /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'test_suite'
+    warnings.warn(msg)
+  /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+    warnings.warn(msg)
+  /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/setuptools/dist.py:332: InformationOnly: Normalizing '2.10.0-dev0' to '2.10.0.dev0'
+    self.metadata.version = self._normalize_version(self.metadata.version)
+  /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/setuptools/config/_apply_pyprojecttoml.py:82: SetuptoolsDeprecationWarning: `project.license` as a TOML table is deprecated
+  !!
+
+          ********************************************************************************
+          Please use a simple string containing a SPDX expression for `project.license`. You can also use `project.license-files`. (Both options available on setuptools>=77.0.0).
+
+          By 2026-Feb-18, you need to update your project and remove deprecated calls
+          or your builds will no longer be supported.
+
+          See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+          ********************************************************************************
+
+  !!
+    corresp(dist, value, root_dir)
+  /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/setuptools/config/_apply_pyprojecttoml.py:61: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+  !!
+
+          ********************************************************************************
+          Please consider removing the following classifiers in favor of a SPDX license expression:
+
+          License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+
+          See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+          ********************************************************************************
+
+  !!
+    dist._finalize_license_expression()
+  /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+  !!
+
+          ********************************************************************************
+          Please consider removing the following classifiers in favor of a SPDX license expression:
+
+          License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+
+          See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+          ********************************************************************************
+
+  !!
+    self._finalize_license_expression()
+  running egg_info
+  writing MDAnalysis.egg-info/PKG-INFO
+  writing dependency_links to MDAnalysis.egg-info/dependency_links.txt
+  writing requirements to MDAnalysis.egg-info/requires.txt
+  writing top-level names to MDAnalysis.egg-info/top_level.txt
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayscalars.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarraytypes.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ufuncobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /home/lwoods/workspace/mdanalysis/package/MDAnalysis/lib/include/calc_distances.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayscalars.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarraytypes.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ufuncobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /home/lwoods/workspace/mdanalysis/package/MDAnalysis/lib/include/calc_distances.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayscalars.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarraytypes.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ufuncobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayscalars.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarraytypes.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ufuncobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayscalars.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarraytypes.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ufuncobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayscalars.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarraytypes.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ufuncobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayscalars.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarraytypes.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ufuncobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /home/lwoods/workspace/mdanalysis/package/MDAnalysis/analysis/encore/clustering/include/ap.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayscalars.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarraytypes.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ufuncobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /home/lwoods/workspace/mdanalysis/package/MDAnalysis/analysis/encore/dimensionality_reduction/include/spe.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayscalars.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarraytypes.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ufuncobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /home/lwoods/workspace/mdanalysis/package/MDAnalysis/lib/include/calc_distances.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayscalars.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarraytypes.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ufuncobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayscalars.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarraytypes.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ufuncobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /home/lwoods/workspace/mdanalysis/package/MDAnalysis/lib/include/calc_distances.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayscalars.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarraytypes.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ufuncobject.h won't be automatically included in the manifest: the path must be relative
+  reading manifest file 'MDAnalysis.egg-info/SOURCES.txt'
+  reading manifest template 'MANIFEST.in'
+  warning: no previously-included files matching 'doc/html/html' found anywhere in distribution
+  warning: no previously-included files matching '*.pyc' found anywhere in distribution
+  warning: no previously-included files matching '*.pyo' found anywhere in distribution
+  warning: no previously-included files matching '*.pyd' found anywhere in distribution
+  warning: no previously-included files matching '*~' found anywhere in distribution
+  warning: no previously-included files matching '.git' found anywhere in distribution
+  adding license file 'LICENSE'
+  adding license file 'AUTHORS'
+  writing manifest file 'MDAnalysis.egg-info/SOURCES.txt'
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Running command Preparing metadata (pyproject.toml)
+  performance hint: MDAnalysis/lib/c_distances.pyx:275:5: Exception check on '_minimum_image_orthogonal' will always require the GIL to be acquired.
+  Possible solutions:
+        1. Declare '_minimum_image_orthogonal' as 'noexcept' if you control the definition and you're sure you don't want the function to raise exceptions.
+        2. Use an 'int' return type on '_minimum_image_orthogonal' to allow an error code to be returned.
+  performance hint: MDAnalysis/lib/c_distances.pyx:302:5: Exception check on '_minimum_image_triclinic' will always require the GIL to be acquired.
+  Possible solutions:
+        1. Declare '_minimum_image_triclinic' as 'noexcept' if you control the definition and you're sure you don't want the function to raise exceptions.
+        2. Use an 'int' return type on '_minimum_image_triclinic' to allow an error code to be returned.
+  performance hint: MDAnalysis/lib/c_distances.pyx:390:37: Exception check after calling '__pyx_fuse_0_minimum_image_orthogonal' will always require the GIL to be acquired.
+  Possible solutions:
+        1. Declare '__pyx_fuse_0_minimum_image_orthogonal' as 'noexcept' if you control the definition and you're sure you don't want the function to raise exceptions.
+        2. Use an 'int' return type on '__pyx_fuse_0_minimum_image_orthogonal' to allow an error code to be returned.
+  performance hint: MDAnalysis/lib/c_distances.pyx:390:37: Exception check after calling '__pyx_fuse_1_minimum_image_orthogonal' will always require the GIL to be acquired.
+  Possible solutions:
+        1. Declare '__pyx_fuse_1_minimum_image_orthogonal' as 'noexcept' if you control the definition and you're sure you don't want the function to raise exceptions.
+        2. Use an 'int' return type on '__pyx_fuse_1_minimum_image_orthogonal' to allow an error code to be returned.
+  performance hint: MDAnalysis/lib/c_distances.pyx:414:36: Exception check after calling '__pyx_fuse_0_minimum_image_triclinic' will always require the GIL to be acquired.
+  Possible solutions:
+        1. Declare '__pyx_fuse_0_minimum_image_triclinic' as 'noexcept' if you control the definition and you're sure you don't want the function to raise exceptions.
+        2. Use an 'int' return type on '__pyx_fuse_0_minimum_image_triclinic' to allow an error code to be returned.
+  performance hint: MDAnalysis/lib/c_distances.pyx:414:36: Exception check after calling '__pyx_fuse_1_minimum_image_triclinic' will always require the GIL to be acquired.
+  Possible solutions:
+        1. Declare '__pyx_fuse_1_minimum_image_triclinic' as 'noexcept' if you control the definition and you're sure you don't want the function to raise exceptions.
+        2. Use an 'int' return type on '__pyx_fuse_1_minimum_image_triclinic' to allow an error code to be returned.
+  performance hint: MDAnalysis/lib/nsgrid.pyx:417:37: Exception check after calling 'coord2cellid' will always require the GIL to be acquired. Declare 'coord2cellid' as 'noexcept' if you control the definition and you're sure you don't want the function to raise exceptions.
+  performance hint: MDAnalysis/lib/nsgrid.pyx:431:26: Exception check after calling 'coord2cellxyz' will always require the GIL to be acquired.
+  Possible solutions:
+        1. Declare 'coord2cellxyz' as 'noexcept' if you control the definition and you're sure you don't want the function to raise exceptions.
+        2. Use an 'int' return type on 'coord2cellxyz' to allow an error code to be returned.
+  performance hint: MDAnalysis/lib/nsgrid.pyx:559:34: Exception check after calling 'coord2cellxyz' will always require the GIL to be acquired.
+  Possible solutions:
+        1. Declare 'coord2cellxyz' as 'noexcept' if you control the definition and you're sure you don't want the function to raise exceptions.
+        2. Use an 'int' return type on 'coord2cellxyz' to allow an error code to be returned.
+  performance hint: MDAnalysis/lib/nsgrid.pyx:567:56: Exception check after calling 'cellxyz2cellid' will always require the GIL to be acquired. Declare 'cellxyz2cellid' as 'noexcept' if you control the definition and you're sure you don't want the function to raise exceptions.
+  performance hint: MDAnalysis/lib/nsgrid.pyx:574:53: Exception check after calling 'calc_distsq' will always require the GIL to be acquired. Declare 'calc_distsq' as 'noexcept' if you control the definition and you're sure you don't want the function to raise exceptions.
+  performance hint: MDAnalysis/lib/nsgrid.pyx:578:57: Exception check after calling 'add_neighbors' will always require the GIL to be acquired.
+  Possible solutions:
+        1. Declare 'add_neighbors' as 'noexcept' if you control the definition and you're sure you don't want the function to raise exceptions.
+        2. Use an 'int' return type on 'add_neighbors' to allow an error code to be returned.
+  Attempting to autodetect OpenMP support... Compiler supports OpenMP
+  Will attempt to use Cython.
+  Compiling MDAnalysis/lib/formats/libdcd.pyx because it changed.
+  Compiling MDAnalysis/lib/c_distances.pyx because it changed.
+  Compiling MDAnalysis/lib/c_distances_openmp.pyx because it changed.
+  Compiling MDAnalysis/lib/qcprot.pyx because it changed.
+  Compiling MDAnalysis/lib/formats/libmdaxdr.pyx because it changed.
+  Compiling MDAnalysis/lib/formats/cython_util.pyx because it changed.
+  Compiling MDAnalysis/analysis/encore/cutils.pyx because it changed.
+  Compiling MDAnalysis/analysis/encore/clustering/affinityprop.pyx because it changed.
+  Compiling MDAnalysis/analysis/encore/dimensionality_reduction/stochasticproxembed.pyx because it changed.
+  Compiling MDAnalysis/lib/_cutil.pyx because it changed.
+  Compiling MDAnalysis/lib/_augment.pyx because it changed.
+  Compiling MDAnalysis/lib/nsgrid.pyx because it changed.
+  Compiling MDAnalysis/coordinates/timestep.pyx because it changed.
+  [ 1/13] Cythonizing MDAnalysis/analysis/encore/clustering/affinityprop.pyx
+  [ 2/13] Cythonizing MDAnalysis/analysis/encore/cutils.pyx
+  [ 3/13] Cythonizing MDAnalysis/analysis/encore/dimensionality_reduction/stochasticproxembed.pyx
+  [ 4/13] Cythonizing MDAnalysis/coordinates/timestep.pyx
+  [ 5/13] Cythonizing MDAnalysis/lib/_augment.pyx
+  [ 6/13] Cythonizing MDAnalysis/lib/_cutil.pyx
+  [ 7/13] Cythonizing MDAnalysis/lib/c_distances.pyx
+  [ 8/13] Cythonizing MDAnalysis/lib/c_distances_openmp.pyx
+  [ 9/13] Cythonizing MDAnalysis/lib/formats/cython_util.pyx
+  [10/13] Cythonizing MDAnalysis/lib/formats/libdcd.pyx
+  [11/13] Cythonizing MDAnalysis/lib/formats/libmdaxdr.pyx
+  [12/13] Cythonizing MDAnalysis/lib/nsgrid.pyx
+  [13/13] Cythonizing MDAnalysis/lib/qcprot.pyx
+  /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'test_suite'
+    warnings.warn(msg)
+  /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+    warnings.warn(msg)
+  /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/setuptools/dist.py:332: InformationOnly: Normalizing '2.10.0-dev0' to '2.10.0.dev0'
+    self.metadata.version = self._normalize_version(self.metadata.version)
+  /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/setuptools/config/_apply_pyprojecttoml.py:82: SetuptoolsDeprecationWarning: `project.license` as a TOML table is deprecated
+  !!
+
+          ********************************************************************************
+          Please use a simple string containing a SPDX expression for `project.license`. You can also use `project.license-files`. (Both options available on setuptools>=77.0.0).
+
+          By 2026-Feb-18, you need to update your project and remove deprecated calls
+          or your builds will no longer be supported.
+
+          See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+          ********************************************************************************
+
+  !!
+    corresp(dist, value, root_dir)
+  /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/setuptools/config/_apply_pyprojecttoml.py:61: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+  !!
+
+          ********************************************************************************
+          Please consider removing the following classifiers in favor of a SPDX license expression:
+
+          License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+
+          See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+          ********************************************************************************
+
+  !!
+    dist._finalize_license_expression()
+  /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+  !!
+
+          ********************************************************************************
+          Please consider removing the following classifiers in favor of a SPDX license expression:
+
+          License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+
+          See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+          ********************************************************************************
+
+  !!
+    self._finalize_license_expression()
+  running dist_info
+  creating /tmp/pip-modern-metadata-l88szdu9/MDAnalysis.egg-info
+  writing /tmp/pip-modern-metadata-l88szdu9/MDAnalysis.egg-info/PKG-INFO
+  writing dependency_links to /tmp/pip-modern-metadata-l88szdu9/MDAnalysis.egg-info/dependency_links.txt
+  writing requirements to /tmp/pip-modern-metadata-l88szdu9/MDAnalysis.egg-info/requires.txt
+  writing top-level names to /tmp/pip-modern-metadata-l88szdu9/MDAnalysis.egg-info/top_level.txt
+  writing manifest file '/tmp/pip-modern-metadata-l88szdu9/MDAnalysis.egg-info/SOURCES.txt'
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayscalars.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarraytypes.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ufuncobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /home/lwoods/workspace/mdanalysis/package/MDAnalysis/lib/include/calc_distances.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayscalars.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarraytypes.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ufuncobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /home/lwoods/workspace/mdanalysis/package/MDAnalysis/lib/include/calc_distances.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayscalars.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarraytypes.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ufuncobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayscalars.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarraytypes.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ufuncobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayscalars.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarraytypes.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ufuncobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayscalars.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarraytypes.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ufuncobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayscalars.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarraytypes.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ufuncobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /home/lwoods/workspace/mdanalysis/package/MDAnalysis/analysis/encore/clustering/include/ap.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayscalars.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarraytypes.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ufuncobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /home/lwoods/workspace/mdanalysis/package/MDAnalysis/analysis/encore/dimensionality_reduction/include/spe.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayscalars.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarraytypes.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ufuncobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /home/lwoods/workspace/mdanalysis/package/MDAnalysis/lib/include/calc_distances.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayscalars.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarraytypes.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ufuncobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayscalars.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarraytypes.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ufuncobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /home/lwoods/workspace/mdanalysis/package/MDAnalysis/lib/include/calc_distances.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayscalars.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarraytypes.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ufuncobject.h won't be automatically included in the manifest: the path must be relative
+  reading manifest file '/tmp/pip-modern-metadata-l88szdu9/MDAnalysis.egg-info/SOURCES.txt'
+  reading manifest template 'MANIFEST.in'
+  warning: no previously-included files matching 'doc/html/html' found anywhere in distribution
+  warning: no previously-included files matching '*.pyc' found anywhere in distribution
+  warning: no previously-included files matching '*.pyo' found anywhere in distribution
+  warning: no previously-included files matching '*.pyd' found anywhere in distribution
+  warning: no previously-included files matching '*~' found anywhere in distribution
+  warning: no previously-included files matching '.git' found anywhere in distribution
+  adding license file 'LICENSE'
+  adding license file 'AUTHORS'
+  writing manifest file '/tmp/pip-modern-metadata-l88szdu9/MDAnalysis.egg-info/SOURCES.txt'
+  creating '/tmp/pip-modern-metadata-l88szdu9/mdanalysis-2.10.0.dev0.dist-info'
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: numpy>=1.23.2 in /home/lwoods/miniconda3/envs/tmp/lib/python3.11/site-packages (from MDAnalysis==2.10.0.dev0) (2.3.0)
+Collecting GridDataFormats>=0.4.0 (from MDAnalysis==2.10.0.dev0)
+  Obtaining dependency information for GridDataFormats>=0.4.0 from https://files.pythonhosted.org/packages/89/ab/9cae972ca177f7c64017f4b76f3780c832da52737b95c3e39ed0701af7a7/GridDataFormats-1.0.2-py3-none-any.whl.metadata
+  Using cached GridDataFormats-1.0.2-py3-none-any.whl.metadata (4.9 kB)
+Collecting mmtf-python>=1.0.0 (from MDAnalysis==2.10.0.dev0)
+  Obtaining dependency information for mmtf-python>=1.0.0 from https://files.pythonhosted.org/packages/3c/f1/efea3da858043ed9c078f507ab744b6d00933c7bc8a75a24821937600178/mmtf_python-1.1.3-py2.py3-none-any.whl.metadata
+  Using cached mmtf_python-1.1.3-py2.py3-none-any.whl.metadata (1.2 kB)
+Collecting joblib>=0.12 (from MDAnalysis==2.10.0.dev0)
+  Obtaining dependency information for joblib>=0.12 from https://files.pythonhosted.org/packages/7d/4f/1195bbac8e0c2acc5f740661631d8d750dc38d4a32b23ee5df3cde6f4e0d/joblib-1.5.1-py3-none-any.whl.metadata
+  Using cached joblib-1.5.1-py3-none-any.whl.metadata (5.6 kB)
+  Link requires a different Python (3.11.13 not in: '>=3.7,<3.10'): https://files.pythonhosted.org/packages/99/f1/c00d6be56e1a718a3068079e3ec8ce044d7179345280f6a3f5066068af0d/scipy-1.6.2.tar.gz (from https://pypi.org/simple/scipy/) (requires-python:>=3.7,<3.10)
+  Link requires a different Python (3.11.13 not in: '>=3.7,<3.10'): https://files.pythonhosted.org/packages/fe/fd/8704c7b7b34cdac850485e638346025ca57c5a859934b9aa1be5399b33b7/scipy-1.6.3.tar.gz (from https://pypi.org/simple/scipy/) (requires-python:>=3.7,<3.10)
+  Link requires a different Python (3.11.13 not in: '>=3.7,<3.10'): https://files.pythonhosted.org/packages/bb/bb/944f559d554df6c9adf037aa9fc982a9706ee0e96c0d5beac701cb158900/scipy-1.7.0.tar.gz (from https://pypi.org/simple/scipy/) (requires-python:>=3.7,<3.10)
+  Link requires a different Python (3.11.13 not in: '>=3.7,<3.10'): https://files.pythonhosted.org/packages/47/33/a24aec22b7be7fdb10ec117a95e1e4099890d8bbc6646902f443fc7719d1/scipy-1.7.1.tar.gz (from https://pypi.org/simple/scipy/) (requires-python:>=3.7,<3.10)
+  Link requires a different Python (3.11.13 not in: '>=3.7,<3.11'): https://files.pythonhosted.org/packages/0e/23/58c4f995475a2a97cb5f4a032aedaf881ad87cd976a7180c55118d105a1d/scipy-1.7.2.tar.gz (from https://pypi.org/simple/scipy/) (requires-python:>=3.7,<3.11)
+  Link requires a different Python (3.11.13 not in: '>=3.7,<3.11'): https://files.pythonhosted.org/packages/61/67/1a654b96309c991762ee9bc39c363fc618076b155fe52d295211cf2536c7/scipy-1.7.3.tar.gz (from https://pypi.org/simple/scipy/) (requires-python:>=3.7,<3.11)
+  Link requires a different Python (3.11.13 not in: '>=3.8,<3.11'): https://files.pythonhosted.org/packages/c0/ad/e3c052ed4e0027a8abef0a5e8441a044427d252d17d9aee06d56e62fc698/scipy-1.8.0rc1.tar.gz (from https://pypi.org/simple/scipy/) (requires-python:>=3.8,<3.11)
+  Link requires a different Python (3.11.13 not in: '>=3.8,<3.11'): https://files.pythonhosted.org/packages/29/d2/151a54944b333e465f98804dced31dab1284f3c37b752b9cefa710b64681/scipy-1.8.0rc2.tar.gz (from https://pypi.org/simple/scipy/) (requires-python:>=3.8,<3.11)
+  Link requires a different Python (3.11.13 not in: '>=3.8,<3.11'): https://files.pythonhosted.org/packages/e4/26/83dd1c6378513a6241d984bda9f08c512b6e35fff13fba3acc1b3c195f02/scipy-1.8.0rc3.tar.gz (from https://pypi.org/simple/scipy/) (requires-python:>=3.8,<3.11)
+  Link requires a different Python (3.11.13 not in: '>=3.8,<3.11'): https://files.pythonhosted.org/packages/22/78/056cc43e7737811b6f50886788a940f852773dd9804f5365952805db9648/scipy-1.8.0rc4.tar.gz (from https://pypi.org/simple/scipy/) (requires-python:>=3.8,<3.11)
+  Link requires a different Python (3.11.13 not in: '>=3.8,<3.11'): https://files.pythonhosted.org/packages/b4/a2/4faa34bf0cdbefd5c706625f1234987795f368eb4e97bde9d6f46860843e/scipy-1.8.0.tar.gz (from https://pypi.org/simple/scipy/) (requires-python:>=3.8,<3.11)
+  Link requires a different Python (3.11.13 not in: '>=3.8,<3.11'): https://files.pythonhosted.org/packages/26/b5/9330f004b9a3b2b6a31f59f46f1617ce9ca15c0e7fe64288c20385a05c9d/scipy-1.8.1.tar.gz (from https://pypi.org/simple/scipy/) (requires-python:>=3.8,<3.11)
+Collecting scipy>=1.5.0 (from MDAnalysis==2.10.0.dev0)
+  Obtaining dependency information for scipy>=1.5.0 from https://files.pythonhosted.org/packages/bd/37/89f19c8c05505d0601ed5650156e50eb881ae3918786c8fd7262b4ee66d3/scipy-1.15.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+  Using cached scipy-1.15.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+Collecting matplotlib>=1.5.1 (from MDAnalysis==2.10.0.dev0)
+  Obtaining dependency information for matplotlib>=1.5.1 from https://files.pythonhosted.org/packages/e7/e3/c82963a3b86d6e6d5874cbeaa390166458a7f1961bab9feb14d3d1a10f02/matplotlib-3.10.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+  Using cached matplotlib-3.10.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+Collecting tqdm>=4.43.0 (from MDAnalysis==2.10.0.dev0)
+  Obtaining dependency information for tqdm>=4.43.0 from https://files.pythonhosted.org/packages/d0/30/dc54f88dd4a2b5dc8a0279bdd7270e735851848b762aeb1c1184ed1f6b14/tqdm-4.67.1-py3-none-any.whl.metadata
+  Using cached tqdm-4.67.1-py3-none-any.whl.metadata (57 kB)
+Collecting threadpoolctl (from MDAnalysis==2.10.0.dev0)
+  Obtaining dependency information for threadpoolctl from https://files.pythonhosted.org/packages/32/d5/f9a850d79b0851d1d4ef6456097579a9005b31fea68726a4ae5f2d82ddd9/threadpoolctl-3.6.0-py3-none-any.whl.metadata
+  Using cached threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+Collecting packaging (from MDAnalysis==2.10.0.dev0)
+  Obtaining dependency information for packaging from https://files.pythonhosted.org/packages/20/12/38679034af332785aac8774540895e234f4d07f7545804097de4b666afd8/packaging-25.0-py3-none-any.whl.metadata
+  Using cached packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting filelock (from MDAnalysis==2.10.0.dev0)
+  Obtaining dependency information for filelock from https://files.pythonhosted.org/packages/4d/36/2a115987e2d8c300a974597416d9de88f2444426de9571f4b59b2cca3acc/filelock-3.18.0-py3-none-any.whl.metadata
+  Using cached filelock-3.18.0-py3-none-any.whl.metadata (2.9 kB)
+Collecting mda-xdrlib (from MDAnalysis==2.10.0.dev0)
+  Obtaining dependency information for mda-xdrlib from https://files.pythonhosted.org/packages/4f/4b/5fe3a00833a9f9775b3c237624a6212798167278ffe10fe0de04f58612d0/mda_xdrlib-0.2.0-py3-none-any.whl.metadata
+  Using cached mda_xdrlib-0.2.0-py3-none-any.whl.metadata (19 kB)
+Collecting mrcfile (from GridDataFormats>=0.4.0->MDAnalysis==2.10.0.dev0)
+  Obtaining dependency information for mrcfile from https://files.pythonhosted.org/packages/6f/cb/3f4ee8233f30c7926f1ed4885ff32b79ec7ce3210370f43e1cb2b385bed6/mrcfile-1.5.4-py2.py3-none-any.whl.metadata
+  Using cached mrcfile-1.5.4-py2.py3-none-any.whl.metadata (7.0 kB)
+Collecting contourpy>=1.0.1 (from matplotlib>=1.5.1->MDAnalysis==2.10.0.dev0)
+  Obtaining dependency information for contourpy>=1.0.1 from https://files.pythonhosted.org/packages/c2/f3/20c5d1ef4f4748e52d60771b8560cf00b69d5c6368b5c2e9311bcfa2a08b/contourpy-1.3.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+  Using cached contourpy-1.3.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.5 kB)
+Collecting cycler>=0.10 (from matplotlib>=1.5.1->MDAnalysis==2.10.0.dev0)
+  Obtaining dependency information for cycler>=0.10 from https://files.pythonhosted.org/packages/e7/05/c19819d5e3d95294a6f5947fb9b9629efb316b96de511b418c53d245aae6/cycler-0.12.1-py3-none-any.whl.metadata
+  Using cached cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools>=4.22.0 (from matplotlib>=1.5.1->MDAnalysis==2.10.0.dev0)
+  Obtaining dependency information for fonttools>=4.22.0 from https://files.pythonhosted.org/packages/60/d1/301aec4f02995958b7af6728f838b2e5cc9296bec7eae350722dec31f685/fonttools-4.58.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+  Using cached fonttools-4.58.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (106 kB)
+Collecting kiwisolver>=1.3.1 (from matplotlib>=1.5.1->MDAnalysis==2.10.0.dev0)
+  Obtaining dependency information for kiwisolver>=1.3.1 from https://files.pythonhosted.org/packages/3a/97/5edbed69a9d0caa2e4aa616ae7df8127e10f6586940aa683a496c2c280b9/kiwisolver-1.4.8-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+  Using cached kiwisolver-1.4.8-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.2 kB)
+Collecting pillow>=8 (from matplotlib>=1.5.1->MDAnalysis==2.10.0.dev0)
+  Obtaining dependency information for pillow>=8 from https://files.pythonhosted.org/packages/20/f2/805ad600fc59ebe4f1ba6129cd3a75fb0da126975c8579b8f57abeb61e80/pillow-11.2.1-cp311-cp311-manylinux_2_28_x86_64.whl.metadata
+  Using cached pillow-11.2.1-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (8.9 kB)
+Collecting pyparsing>=2.3.1 (from matplotlib>=1.5.1->MDAnalysis==2.10.0.dev0)
+  Obtaining dependency information for pyparsing>=2.3.1 from https://files.pythonhosted.org/packages/05/e7/df2285f3d08fee213f2d041540fa4fc9ca6c2d44cf36d3a035bf2a8d2bcc/pyparsing-3.2.3-py3-none-any.whl.metadata
+  Using cached pyparsing-3.2.3-py3-none-any.whl.metadata (5.0 kB)
+Collecting python-dateutil>=2.7 (from matplotlib>=1.5.1->MDAnalysis==2.10.0.dev0)
+  Obtaining dependency information for python-dateutil>=2.7 from https://files.pythonhosted.org/packages/ec/57/56b9bcc3c9c6a792fcbaf139543cee77261f3651ca9da0c93f5c1221264b/python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata
+  Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting msgpack>=1.0.0 (from mmtf-python>=1.0.0->MDAnalysis==2.10.0.dev0)
+  Obtaining dependency information for msgpack>=1.0.0 from https://files.pythonhosted.org/packages/a8/a1/ad7b84b91ab5a324e707f4c9761633e357820b011a01e34ce658c1dda7cc/msgpack-1.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+  Using cached msgpack-1.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.4 kB)
+Collecting six>=1.5 (from python-dateutil>=2.7->matplotlib>=1.5.1->MDAnalysis==2.10.0.dev0)
+  Obtaining dependency information for six>=1.5 from https://files.pythonhosted.org/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl.metadata
+  Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Using cached GridDataFormats-1.0.2-py3-none-any.whl (2.1 MB)
+Using cached joblib-1.5.1-py3-none-any.whl (307 kB)
+Using cached matplotlib-3.10.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (8.6 MB)
+Using cached contourpy-1.3.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (326 kB)
+Using cached cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Using cached fonttools-4.58.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.9 MB)
+Using cached kiwisolver-1.4.8-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.4 MB)
+Using cached mmtf_python-1.1.3-py2.py3-none-any.whl (25 kB)
+Using cached msgpack-1.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (403 kB)
+Using cached packaging-25.0-py3-none-any.whl (66 kB)
+Using cached pillow-11.2.1-cp311-cp311-manylinux_2_28_x86_64.whl (4.6 MB)
+Using cached pyparsing-3.2.3-py3-none-any.whl (111 kB)
+Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Using cached scipy-1.15.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (37.7 MB)
+Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+Using cached tqdm-4.67.1-py3-none-any.whl (78 kB)
+Using cached filelock-3.18.0-py3-none-any.whl (16 kB)
+Using cached mda_xdrlib-0.2.0-py3-none-any.whl (14 kB)
+Using cached mrcfile-1.5.4-py2.py3-none-any.whl (45 kB)
+Using cached threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+Building wheels for collected packages: MDAnalysis
+  Building wheel for MDAnalysis (pyproject.toml): started
+  Running command Building wheel for MDAnalysis (pyproject.toml)
+  performance hint: MDAnalysis/lib/c_distances.pyx:275:5: Exception check on '_minimum_image_orthogonal' will always require the GIL to be acquired.
+  Possible solutions:
+        1. Declare '_minimum_image_orthogonal' as 'noexcept' if you control the definition and you're sure you don't want the function to raise exceptions.
+        2. Use an 'int' return type on '_minimum_image_orthogonal' to allow an error code to be returned.
+  performance hint: MDAnalysis/lib/c_distances.pyx:302:5: Exception check on '_minimum_image_triclinic' will always require the GIL to be acquired.
+  Possible solutions:
+        1. Declare '_minimum_image_triclinic' as 'noexcept' if you control the definition and you're sure you don't want the function to raise exceptions.
+        2. Use an 'int' return type on '_minimum_image_triclinic' to allow an error code to be returned.
+  performance hint: MDAnalysis/lib/c_distances.pyx:390:37: Exception check after calling '__pyx_fuse_0_minimum_image_orthogonal' will always require the GIL to be acquired.
+  Possible solutions:
+        1. Declare '__pyx_fuse_0_minimum_image_orthogonal' as 'noexcept' if you control the definition and you're sure you don't want the function to raise exceptions.
+        2. Use an 'int' return type on '__pyx_fuse_0_minimum_image_orthogonal' to allow an error code to be returned.
+  performance hint: MDAnalysis/lib/c_distances.pyx:390:37: Exception check after calling '__pyx_fuse_1_minimum_image_orthogonal' will always require the GIL to be acquired.
+  Possible solutions:
+        1. Declare '__pyx_fuse_1_minimum_image_orthogonal' as 'noexcept' if you control the definition and you're sure you don't want the function to raise exceptions.
+        2. Use an 'int' return type on '__pyx_fuse_1_minimum_image_orthogonal' to allow an error code to be returned.
+  performance hint: MDAnalysis/lib/c_distances.pyx:414:36: Exception check after calling '__pyx_fuse_0_minimum_image_triclinic' will always require the GIL to be acquired.
+  Possible solutions:
+        1. Declare '__pyx_fuse_0_minimum_image_triclinic' as 'noexcept' if you control the definition and you're sure you don't want the function to raise exceptions.
+        2. Use an 'int' return type on '__pyx_fuse_0_minimum_image_triclinic' to allow an error code to be returned.
+  performance hint: MDAnalysis/lib/c_distances.pyx:414:36: Exception check after calling '__pyx_fuse_1_minimum_image_triclinic' will always require the GIL to be acquired.
+  Possible solutions:
+        1. Declare '__pyx_fuse_1_minimum_image_triclinic' as 'noexcept' if you control the definition and you're sure you don't want the function to raise exceptions.
+        2. Use an 'int' return type on '__pyx_fuse_1_minimum_image_triclinic' to allow an error code to be returned.
+  performance hint: MDAnalysis/lib/nsgrid.pyx:417:37: Exception check after calling 'coord2cellid' will always require the GIL to be acquired. Declare 'coord2cellid' as 'noexcept' if you control the definition and you're sure you don't want the function to raise exceptions.
+  performance hint: MDAnalysis/lib/nsgrid.pyx:431:26: Exception check after calling 'coord2cellxyz' will always require the GIL to be acquired.
+  Possible solutions:
+        1. Declare 'coord2cellxyz' as 'noexcept' if you control the definition and you're sure you don't want the function to raise exceptions.
+        2. Use an 'int' return type on 'coord2cellxyz' to allow an error code to be returned.
+  performance hint: MDAnalysis/lib/nsgrid.pyx:559:34: Exception check after calling 'coord2cellxyz' will always require the GIL to be acquired.
+  Possible solutions:
+        1. Declare 'coord2cellxyz' as 'noexcept' if you control the definition and you're sure you don't want the function to raise exceptions.
+        2. Use an 'int' return type on 'coord2cellxyz' to allow an error code to be returned.
+  performance hint: MDAnalysis/lib/nsgrid.pyx:567:56: Exception check after calling 'cellxyz2cellid' will always require the GIL to be acquired. Declare 'cellxyz2cellid' as 'noexcept' if you control the definition and you're sure you don't want the function to raise exceptions.
+  performance hint: MDAnalysis/lib/nsgrid.pyx:574:53: Exception check after calling 'calc_distsq' will always require the GIL to be acquired. Declare 'calc_distsq' as 'noexcept' if you control the definition and you're sure you don't want the function to raise exceptions.
+  performance hint: MDAnalysis/lib/nsgrid.pyx:578:57: Exception check after calling 'add_neighbors' will always require the GIL to be acquired.
+  Possible solutions:
+        1. Declare 'add_neighbors' as 'noexcept' if you control the definition and you're sure you don't want the function to raise exceptions.
+        2. Use an 'int' return type on 'add_neighbors' to allow an error code to be returned.
+  Attempting to autodetect OpenMP support... Compiler supports OpenMP
+  Will attempt to use Cython.
+  Compiling MDAnalysis/lib/formats/libdcd.pyx because it changed.
+  Compiling MDAnalysis/lib/c_distances.pyx because it changed.
+  Compiling MDAnalysis/lib/c_distances_openmp.pyx because it changed.
+  Compiling MDAnalysis/lib/qcprot.pyx because it changed.
+  Compiling MDAnalysis/lib/formats/libmdaxdr.pyx because it changed.
+  Compiling MDAnalysis/lib/formats/cython_util.pyx because it changed.
+  Compiling MDAnalysis/analysis/encore/cutils.pyx because it changed.
+  Compiling MDAnalysis/analysis/encore/clustering/affinityprop.pyx because it changed.
+  Compiling MDAnalysis/analysis/encore/dimensionality_reduction/stochasticproxembed.pyx because it changed.
+  Compiling MDAnalysis/lib/_cutil.pyx because it changed.
+  Compiling MDAnalysis/lib/_augment.pyx because it changed.
+  Compiling MDAnalysis/lib/nsgrid.pyx because it changed.
+  Compiling MDAnalysis/coordinates/timestep.pyx because it changed.
+  [ 1/13] Cythonizing MDAnalysis/analysis/encore/clustering/affinityprop.pyx
+  [ 2/13] Cythonizing MDAnalysis/analysis/encore/cutils.pyx
+  [ 3/13] Cythonizing MDAnalysis/analysis/encore/dimensionality_reduction/stochasticproxembed.pyx
+  [ 4/13] Cythonizing MDAnalysis/coordinates/timestep.pyx
+  [ 5/13] Cythonizing MDAnalysis/lib/_augment.pyx
+  [ 6/13] Cythonizing MDAnalysis/lib/_cutil.pyx
+  [ 7/13] Cythonizing MDAnalysis/lib/c_distances.pyx
+  [ 8/13] Cythonizing MDAnalysis/lib/c_distances_openmp.pyx
+  [ 9/13] Cythonizing MDAnalysis/lib/formats/cython_util.pyx
+  [10/13] Cythonizing MDAnalysis/lib/formats/libdcd.pyx
+  [11/13] Cythonizing MDAnalysis/lib/formats/libmdaxdr.pyx
+  [12/13] Cythonizing MDAnalysis/lib/nsgrid.pyx
+  [13/13] Cythonizing MDAnalysis/lib/qcprot.pyx
+  /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'test_suite'
+    warnings.warn(msg)
+  /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+    warnings.warn(msg)
+  /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/setuptools/dist.py:332: InformationOnly: Normalizing '2.10.0-dev0' to '2.10.0.dev0'
+    self.metadata.version = self._normalize_version(self.metadata.version)
+  /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/setuptools/config/_apply_pyprojecttoml.py:82: SetuptoolsDeprecationWarning: `project.license` as a TOML table is deprecated
+  !!
+
+          ********************************************************************************
+          Please use a simple string containing a SPDX expression for `project.license`. You can also use `project.license-files`. (Both options available on setuptools>=77.0.0).
+
+          By 2026-Feb-18, you need to update your project and remove deprecated calls
+          or your builds will no longer be supported.
+
+          See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+          ********************************************************************************
+
+  !!
+    corresp(dist, value, root_dir)
+  /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/setuptools/config/_apply_pyprojecttoml.py:61: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+  !!
+
+          ********************************************************************************
+          Please consider removing the following classifiers in favor of a SPDX license expression:
+
+          License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+
+          See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+          ********************************************************************************
+
+  !!
+    dist._finalize_license_expression()
+  /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+  !!
+
+          ********************************************************************************
+          Please consider removing the following classifiers in favor of a SPDX license expression:
+
+          License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+
+          See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+          ********************************************************************************
+
+  !!
+    self._finalize_license_expression()
+  running bdist_wheel
+  running build
+  running build_py
+  copying MDAnalysis/authors.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis
+  copying MDAnalysis/units.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis
+  copying MDAnalysis/version.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis
+  copying MDAnalysis/due.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis
+  copying MDAnalysis/__init__.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis
+  copying MDAnalysis/exceptions.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis
+  copying doc/sphinx/source/conf.py -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source
+  copying MDAnalysis/lib/picklable_file_io.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib
+  copying MDAnalysis/lib/_distopia.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib
+  copying MDAnalysis/lib/pkdtree.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib
+  copying MDAnalysis/lib/transformations.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib
+  copying MDAnalysis/lib/__init__.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib
+  copying MDAnalysis/lib/NeighborSearch.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib
+  copying MDAnalysis/lib/mdamath.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib
+  copying MDAnalysis/lib/log.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib
+  copying MDAnalysis/lib/correlations.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib
+  copying MDAnalysis/lib/distances.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib
+  copying MDAnalysis/lib/util.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib
+  copying MDAnalysis/guesser/base.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/guesser
+  copying MDAnalysis/guesser/tables.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/guesser
+  copying MDAnalysis/guesser/__init__.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/guesser
+  copying MDAnalysis/guesser/default_guesser.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/guesser
+  copying MDAnalysis/selections/base.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/selections
+  copying MDAnalysis/selections/pymol.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/selections
+  copying MDAnalysis/selections/jmol.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/selections
+  copying MDAnalysis/selections/__init__.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/selections
+  copying MDAnalysis/selections/gromacs.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/selections
+  copying MDAnalysis/selections/vmd.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/selections
+  copying MDAnalysis/selections/charmm.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/selections
+  copying MDAnalysis/tests/datafiles.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/tests
+  copying MDAnalysis/tests/__init__.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/tests
+  copying MDAnalysis/transformations/base.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/transformations
+  copying MDAnalysis/transformations/rotate.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/transformations
+  copying MDAnalysis/transformations/fit.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/transformations
+  copying MDAnalysis/transformations/boxdimensions.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/transformations
+  copying MDAnalysis/transformations/wrap.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/transformations
+  copying MDAnalysis/transformations/positionaveraging.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/transformations
+  copying MDAnalysis/transformations/__init__.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/transformations
+  copying MDAnalysis/transformations/translate.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/transformations
+  copying MDAnalysis/transformations/nojump.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/transformations
+  copying MDAnalysis/converters/OpenMMParser.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/converters
+  copying MDAnalysis/converters/base.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/converters
+  copying MDAnalysis/converters/ParmEdParser.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/converters
+  copying MDAnalysis/converters/ParmEd.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/converters
+  copying MDAnalysis/converters/OpenMM.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/converters
+  copying MDAnalysis/converters/__init__.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/converters
+  copying MDAnalysis/converters/RDKitParser.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/converters
+  copying MDAnalysis/converters/RDKit.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/converters
+  copying MDAnalysis/topology/base.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/topology
+  copying MDAnalysis/topology/PQRParser.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/topology
+  copying MDAnalysis/topology/GMSParser.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/topology
+  copying MDAnalysis/topology/tables.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/topology
+  copying MDAnalysis/topology/PDBQTParser.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/topology
+  copying MDAnalysis/topology/MOL2Parser.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/topology
+  copying MDAnalysis/topology/ParmEdParser.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/topology
+  copying MDAnalysis/topology/GROParser.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/topology
+  copying MDAnalysis/topology/ITPParser.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/topology
+  copying MDAnalysis/topology/DMSParser.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/topology
+  copying MDAnalysis/topology/PDBParser.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/topology
+  copying MDAnalysis/topology/GSDParser.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/topology
+  copying MDAnalysis/topology/PSFParser.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/topology
+  copying MDAnalysis/topology/TPRParser.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/topology
+  copying MDAnalysis/topology/ExtendedPDBParser.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/topology
+  copying MDAnalysis/topology/CRDParser.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/topology
+  copying MDAnalysis/topology/TXYZParser.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/topology
+  copying MDAnalysis/topology/__init__.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/topology
+  copying MDAnalysis/topology/DLPolyParser.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/topology
+  copying MDAnalysis/topology/MinimalParser.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/topology
+  copying MDAnalysis/topology/MMTFParser.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/topology
+  copying MDAnalysis/topology/guessers.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/topology
+  copying MDAnalysis/topology/XYZParser.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/topology
+  copying MDAnalysis/topology/FHIAIMSParser.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/topology
+  copying MDAnalysis/topology/core.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/topology
+  copying MDAnalysis/topology/LAMMPSParser.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/topology
+  copying MDAnalysis/topology/TOPParser.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/topology
+  copying MDAnalysis/topology/HoomdXMLParser.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/topology
+  copying MDAnalysis/coordinates/H5MD.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/coordinates
+  copying MDAnalysis/coordinates/MOL2.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/coordinates
+  copying MDAnalysis/coordinates/base.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/coordinates
+  copying MDAnalysis/coordinates/XTC.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/coordinates
+  copying MDAnalysis/coordinates/PQR.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/coordinates
+  copying MDAnalysis/coordinates/DMS.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/coordinates
+  copying MDAnalysis/coordinates/DCD.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/coordinates
+  copying MDAnalysis/coordinates/TRJ.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/coordinates
+  copying MDAnalysis/coordinates/XYZ.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/coordinates
+  copying MDAnalysis/coordinates/null.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/coordinates
+  copying MDAnalysis/coordinates/GSD.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/coordinates
+  copying MDAnalysis/coordinates/NAMDBIN.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/coordinates
+  copying MDAnalysis/coordinates/TRZ.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/coordinates
+  copying MDAnalysis/coordinates/XDR.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/coordinates
+  copying MDAnalysis/coordinates/chemfiles.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/coordinates
+  copying MDAnalysis/coordinates/TXYZ.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/coordinates
+  copying MDAnalysis/coordinates/MMTF.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/coordinates
+  copying MDAnalysis/coordinates/chain.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/coordinates
+  copying MDAnalysis/coordinates/CRD.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/coordinates
+  copying MDAnalysis/coordinates/ParmEd.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/coordinates
+  copying MDAnalysis/coordinates/TRC.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/coordinates
+  copying MDAnalysis/coordinates/LAMMPS.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/coordinates
+  copying MDAnalysis/coordinates/TRR.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/coordinates
+  copying MDAnalysis/coordinates/FHIAIMS.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/coordinates
+  copying MDAnalysis/coordinates/TNG.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/coordinates
+  copying MDAnalysis/coordinates/PDBQT.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/coordinates
+  copying MDAnalysis/coordinates/GMS.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/coordinates
+  copying MDAnalysis/coordinates/INPCRD.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/coordinates
+  copying MDAnalysis/coordinates/__init__.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/coordinates
+  copying MDAnalysis/coordinates/DLPoly.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/coordinates
+  copying MDAnalysis/coordinates/GRO.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/coordinates
+  copying MDAnalysis/coordinates/memory.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/coordinates
+  copying MDAnalysis/coordinates/core.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/coordinates
+  copying MDAnalysis/coordinates/PDB.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/coordinates
+  copying MDAnalysis/visualization/streamlines.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/visualization
+  copying MDAnalysis/visualization/__init__.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/visualization
+  copying MDAnalysis/visualization/streamlines_3D.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/visualization
+  copying MDAnalysis/core/topologyattrs.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/core
+  copying MDAnalysis/core/universe.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/core
+  copying MDAnalysis/core/selection.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/core
+  copying MDAnalysis/core/groups.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/core
+  copying MDAnalysis/core/topology.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/core
+  copying MDAnalysis/core/accessors.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/core
+  copying MDAnalysis/core/__init__.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/core
+  copying MDAnalysis/core/_get_readers.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/core
+  copying MDAnalysis/core/topologyobjects.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/core
+  copying MDAnalysis/analysis/base.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis
+  copying MDAnalysis/analysis/backends.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis
+  copying MDAnalysis/analysis/gnm.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis
+  copying MDAnalysis/analysis/psa.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis
+  copying MDAnalysis/analysis/align.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis
+  copying MDAnalysis/analysis/atomicdistances.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis
+  copying MDAnalysis/analysis/leaflet.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis
+  copying MDAnalysis/analysis/dielectric.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis
+  copying MDAnalysis/analysis/polymer.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis
+  copying MDAnalysis/analysis/nuclinfo.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis
+  copying MDAnalysis/analysis/rms.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis
+  copying MDAnalysis/analysis/waterdynamics.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis
+  copying MDAnalysis/analysis/pca.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis
+  copying MDAnalysis/analysis/rdf.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis
+  copying MDAnalysis/analysis/helix_analysis.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis
+  copying MDAnalysis/analysis/msd.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis
+  copying MDAnalysis/analysis/density.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis
+  copying MDAnalysis/analysis/lineardensity.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis
+  copying MDAnalysis/analysis/diffusionmap.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis
+  copying MDAnalysis/analysis/__init__.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis
+  copying MDAnalysis/analysis/results.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis
+  copying MDAnalysis/analysis/bat.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis
+  copying MDAnalysis/analysis/distances.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis
+  copying MDAnalysis/analysis/dihedrals.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis
+  copying MDAnalysis/analysis/nucleicacids.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis
+  copying MDAnalysis/analysis/contacts.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis
+  copying MDAnalysis/auxiliary/EDR.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/auxiliary
+  copying MDAnalysis/auxiliary/base.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/auxiliary
+  copying MDAnalysis/auxiliary/XVG.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/auxiliary
+  copying MDAnalysis/auxiliary/__init__.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/auxiliary
+  copying MDAnalysis/auxiliary/core.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/auxiliary
+  copying MDAnalysis/lib/libmdanalysis/__init__.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib/libmdanalysis
+  copying MDAnalysis/lib/include/__init__.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib/include
+  copying MDAnalysis/lib/formats/__init__.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib/formats
+  copying MDAnalysis/lib/src/transformations/__init__.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib/src/transformations
+  copying MDAnalysis/lib/formats/include/__init__.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib/formats/include
+  copying MDAnalysis/lib/formats/src/__init__.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib/formats/src
+  copying MDAnalysis/topology/tpr/obj.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/topology/tpr
+  copying MDAnalysis/topology/tpr/utils.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/topology/tpr
+  copying MDAnalysis/topology/tpr/setting.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/topology/tpr
+  copying MDAnalysis/topology/tpr/__init__.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/topology/tpr
+  copying MDAnalysis/analysis/hole2/__init__.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis/hole2
+  copying MDAnalysis/analysis/hydrogenbonds/hbond_autocorrel.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis/hydrogenbonds
+  copying MDAnalysis/analysis/hydrogenbonds/wbridge_analysis.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis/hydrogenbonds
+  copying MDAnalysis/analysis/hydrogenbonds/hbond_analysis.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis/hydrogenbonds
+  copying MDAnalysis/analysis/hydrogenbonds/__init__.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis/hydrogenbonds
+  copying MDAnalysis/analysis/dssp/dssp.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis/dssp
+  copying MDAnalysis/analysis/dssp/__init__.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis/dssp
+  copying MDAnalysis/analysis/dssp/pydssp_numpy.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis/dssp
+  copying MDAnalysis/analysis/encore/confdistmatrix.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis/encore
+  copying MDAnalysis/analysis/encore/bootstrap.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis/encore
+  copying MDAnalysis/analysis/encore/utils.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis/encore
+  copying MDAnalysis/analysis/encore/covariance.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis/encore
+  copying MDAnalysis/analysis/encore/__init__.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis/encore
+  copying MDAnalysis/analysis/encore/similarity.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis/encore
+  copying MDAnalysis/analysis/legacy/__init__.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis/legacy
+  copying MDAnalysis/analysis/legacy/x3dna.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis/legacy
+  copying MDAnalysis/analysis/hbonds/hbond_autocorrel.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis/hbonds
+  copying MDAnalysis/analysis/hbonds/__init__.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis/hbonds
+  copying MDAnalysis/analysis/data/filenames.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis/data
+  copying MDAnalysis/analysis/data/__init__.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis/data
+  copying MDAnalysis/analysis/encore/clustering/cluster.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis/encore/clustering
+  copying MDAnalysis/analysis/encore/clustering/ClusterCollection.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis/encore/clustering
+  copying MDAnalysis/analysis/encore/clustering/ClusteringMethod.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis/encore/clustering
+  copying MDAnalysis/analysis/encore/clustering/__init__.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis/encore/clustering
+  copying MDAnalysis/analysis/encore/dimensionality_reduction/__init__.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis/encore/dimensionality_reduction
+  copying MDAnalysis/analysis/encore/dimensionality_reduction/DimensionalityReductionMethod.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis/encore/dimensionality_reduction
+  copying MDAnalysis/analysis/encore/dimensionality_reduction/reduce_dimensionality.py -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis/encore/dimensionality_reduction
+  running egg_info
+  writing MDAnalysis.egg-info/PKG-INFO
+  writing dependency_links to MDAnalysis.egg-info/dependency_links.txt
+  writing requirements to MDAnalysis.egg-info/requires.txt
+  writing top-level names to MDAnalysis.egg-info/top_level.txt
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayscalars.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarraytypes.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ufuncobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /home/lwoods/workspace/mdanalysis/package/MDAnalysis/lib/include/calc_distances.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayscalars.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarraytypes.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ufuncobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /home/lwoods/workspace/mdanalysis/package/MDAnalysis/lib/include/calc_distances.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayscalars.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarraytypes.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ufuncobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayscalars.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarraytypes.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ufuncobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayscalars.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarraytypes.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ufuncobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayscalars.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarraytypes.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ufuncobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayscalars.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarraytypes.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ufuncobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /home/lwoods/workspace/mdanalysis/package/MDAnalysis/analysis/encore/clustering/include/ap.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayscalars.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarraytypes.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ufuncobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /home/lwoods/workspace/mdanalysis/package/MDAnalysis/analysis/encore/dimensionality_reduction/include/spe.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayscalars.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarraytypes.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ufuncobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /home/lwoods/workspace/mdanalysis/package/MDAnalysis/lib/include/calc_distances.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayscalars.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarraytypes.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ufuncobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayscalars.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarraytypes.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ufuncobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /home/lwoods/workspace/mdanalysis/package/MDAnalysis/lib/include/calc_distances.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayscalars.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarraytypes.h won't be automatically included in the manifest: the path must be relative
+  dependency /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ufuncobject.h won't be automatically included in the manifest: the path must be relative
+  reading manifest file 'MDAnalysis.egg-info/SOURCES.txt'
+  reading manifest template 'MANIFEST.in'
+  warning: no previously-included files matching 'doc/html/html' found anywhere in distribution
+  warning: no previously-included files matching '*.pyc' found anywhere in distribution
+  warning: no previously-included files matching '*.pyo' found anywhere in distribution
+  warning: no previously-included files matching '*.pyd' found anywhere in distribution
+  warning: no previously-included files matching '*~' found anywhere in distribution
+  warning: no previously-included files matching '.git' found anywhere in distribution
+  adding license file 'LICENSE'
+  adding license file 'AUTHORS'
+  writing manifest file 'MDAnalysis.egg-info/SOURCES.txt'
+  copying doc/README -> build/lib.linux-x86_64-cpython-311/doc
+  copying MDAnalysis/analysis/data/rama_ref_data.npy -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis/data
+  copying MDAnalysis/analysis/data/janin_ref_data.npy -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis/data
+  copying doc/sphinx/Makefile -> build/lib.linux-x86_64-cpython-311/doc/sphinx
+  copying doc/sphinx/source/index.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source
+  copying doc/sphinx/source/references.bib -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source
+  copying doc/sphinx/source/documentation_pages/analysis_modules.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages
+  copying doc/sphinx/source/documentation_pages/auxiliary_modules.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages
+  copying doc/sphinx/source/documentation_pages/converters.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages
+  copying doc/sphinx/source/documentation_pages/coordinates_modules.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages
+  copying doc/sphinx/source/documentation_pages/core_modules.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages
+  copying doc/sphinx/source/documentation_pages/exceptions.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages
+  copying doc/sphinx/source/documentation_pages/guesser_modules.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages
+  copying doc/sphinx/source/documentation_pages/lib_modules.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages
+  copying doc/sphinx/source/documentation_pages/overview.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages
+  copying doc/sphinx/source/documentation_pages/references.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages
+  copying doc/sphinx/source/documentation_pages/selections.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages
+  copying doc/sphinx/source/documentation_pages/selections_modules.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages
+  copying doc/sphinx/source/documentation_pages/topology.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages
+  copying doc/sphinx/source/documentation_pages/topology_modules.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages
+  copying doc/sphinx/source/documentation_pages/trajectory_transformations.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages
+  copying doc/sphinx/source/documentation_pages/units.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages
+  copying doc/sphinx/source/documentation_pages/version.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages
+  copying doc/sphinx/source/documentation_pages/visualization_modules.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages
+  copying doc/sphinx/source/images/AnalysisBase_parallel.png -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/images
+  copying doc/sphinx/source/images/RSMD_plot.png -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/images
+  copying doc/sphinx/source/images/janin_demo_plot.png -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/images
+  copying doc/sphinx/source/images/janin_ref_plot.png -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/images
+  copying doc/sphinx/source/images/msd_demo_plot.png -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/images
+  copying doc/sphinx/source/images/parallelization_time.png -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/images
+  copying doc/sphinx/source/images/rama_demo_plot.png -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/images
+  copying doc/sphinx/source/images/rama_ref_plot.png -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/images
+  copying doc/sphinx/source/documentation_pages/lib/NeighborSearch.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/lib
+  copying doc/sphinx/source/documentation_pages/lib/c_distances.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/lib
+  copying doc/sphinx/source/documentation_pages/lib/c_distances_openmp.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/lib
+  copying doc/sphinx/source/documentation_pages/lib/correlations.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/lib
+  copying doc/sphinx/source/documentation_pages/lib/distances.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/lib
+  copying doc/sphinx/source/documentation_pages/lib/log.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/lib
+  copying doc/sphinx/source/documentation_pages/lib/mdamath.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/lib
+  copying doc/sphinx/source/documentation_pages/lib/nsgrid.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/lib
+  copying doc/sphinx/source/documentation_pages/lib/picklable_file_io.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/lib
+  copying doc/sphinx/source/documentation_pages/lib/pkdtree.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/lib
+  copying doc/sphinx/source/documentation_pages/lib/qcprot.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/lib
+  copying doc/sphinx/source/documentation_pages/lib/transformations.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/lib
+  copying doc/sphinx/source/documentation_pages/lib/util.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/lib
+  copying doc/sphinx/source/documentation_pages/selections/base.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/selections
+  copying doc/sphinx/source/documentation_pages/selections/charmm.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/selections
+  copying doc/sphinx/source/documentation_pages/selections/gromacs.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/selections
+  copying doc/sphinx/source/documentation_pages/selections/jmol.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/selections
+  copying doc/sphinx/source/documentation_pages/selections/pymol.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/selections
+  copying doc/sphinx/source/documentation_pages/selections/vmd.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/selections
+  copying doc/sphinx/source/documentation_pages/transformations/base.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/transformations
+  copying doc/sphinx/source/documentation_pages/transformations/boxdimensions.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/transformations
+  copying doc/sphinx/source/documentation_pages/transformations/fit.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/transformations
+  copying doc/sphinx/source/documentation_pages/transformations/nojump.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/transformations
+  copying doc/sphinx/source/documentation_pages/transformations/positionaveraging.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/transformations
+  copying doc/sphinx/source/documentation_pages/transformations/rotate.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/transformations
+  copying doc/sphinx/source/documentation_pages/transformations/translate.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/transformations
+  copying doc/sphinx/source/documentation_pages/transformations/wrap.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/transformations
+  copying doc/sphinx/source/documentation_pages/guesser_modules/base.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/guesser_modules
+  copying doc/sphinx/source/documentation_pages/guesser_modules/default_guesser.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/guesser_modules
+  copying doc/sphinx/source/documentation_pages/guesser_modules/init.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/guesser_modules
+  copying doc/sphinx/source/documentation_pages/guesser_modules/tables.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/guesser_modules
+  copying doc/sphinx/source/documentation_pages/converters/OpenMM.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/converters
+  copying doc/sphinx/source/documentation_pages/converters/ParmEd.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/converters
+  copying doc/sphinx/source/documentation_pages/converters/RDKit.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/converters
+  copying doc/sphinx/source/documentation_pages/converters/base.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/converters
+  copying doc/sphinx/source/documentation_pages/topology/CRDParser.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/topology
+  copying doc/sphinx/source/documentation_pages/topology/DLPolyParser.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/topology
+  copying doc/sphinx/source/documentation_pages/topology/DMSParser.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/topology
+  copying doc/sphinx/source/documentation_pages/topology/ExtendedPDBParser.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/topology
+  copying doc/sphinx/source/documentation_pages/topology/FHIAIMSParser.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/topology
+  copying doc/sphinx/source/documentation_pages/topology/GMSParser.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/topology
+  copying doc/sphinx/source/documentation_pages/topology/GROParser.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/topology
+  copying doc/sphinx/source/documentation_pages/topology/GSDParser.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/topology
+  copying doc/sphinx/source/documentation_pages/topology/HoomdXMLParser.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/topology
+  copying doc/sphinx/source/documentation_pages/topology/ITPParser.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/topology
+  copying doc/sphinx/source/documentation_pages/topology/LAMMPSParser.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/topology
+  copying doc/sphinx/source/documentation_pages/topology/MMTFParser.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/topology
+  copying doc/sphinx/source/documentation_pages/topology/MOL2Parser.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/topology
+  copying doc/sphinx/source/documentation_pages/topology/MinimalParser.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/topology
+  copying doc/sphinx/source/documentation_pages/topology/PDBParser.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/topology
+  copying doc/sphinx/source/documentation_pages/topology/PDBQTParser.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/topology
+  copying doc/sphinx/source/documentation_pages/topology/PQRParser.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/topology
+  copying doc/sphinx/source/documentation_pages/topology/PSFParser.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/topology
+  copying doc/sphinx/source/documentation_pages/topology/TOPParser.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/topology
+  copying doc/sphinx/source/documentation_pages/topology/TPRParser.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/topology
+  copying doc/sphinx/source/documentation_pages/topology/TXYZParser.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/topology
+  copying doc/sphinx/source/documentation_pages/topology/XYZParser.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/topology
+  copying doc/sphinx/source/documentation_pages/topology/base.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/topology
+  copying doc/sphinx/source/documentation_pages/topology/core.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/topology
+  copying doc/sphinx/source/documentation_pages/topology/guessers.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/topology
+  copying doc/sphinx/source/documentation_pages/topology/init.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/topology
+  copying doc/sphinx/source/documentation_pages/topology/tables.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/topology
+  copying doc/sphinx/source/documentation_pages/topology/tpr_util.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/topology
+  copying doc/sphinx/source/documentation_pages/coordinates/CRD.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/coordinates
+  copying doc/sphinx/source/documentation_pages/coordinates/DCD.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/coordinates
+  copying doc/sphinx/source/documentation_pages/coordinates/DLPoly.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/coordinates
+  copying doc/sphinx/source/documentation_pages/coordinates/DMS.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/coordinates
+  copying doc/sphinx/source/documentation_pages/coordinates/FHIAIMS.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/coordinates
+  copying doc/sphinx/source/documentation_pages/coordinates/GMS.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/coordinates
+  copying doc/sphinx/source/documentation_pages/coordinates/GRO.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/coordinates
+  copying doc/sphinx/source/documentation_pages/coordinates/GSD.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/coordinates
+  copying doc/sphinx/source/documentation_pages/coordinates/H5MD.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/coordinates
+  copying doc/sphinx/source/documentation_pages/coordinates/INPCRD.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/coordinates
+  copying doc/sphinx/source/documentation_pages/coordinates/LAMMPS.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/coordinates
+  copying doc/sphinx/source/documentation_pages/coordinates/MMTF.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/coordinates
+  copying doc/sphinx/source/documentation_pages/coordinates/MOL2.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/coordinates
+  copying doc/sphinx/source/documentation_pages/coordinates/NAMDBIN.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/coordinates
+  copying doc/sphinx/source/documentation_pages/coordinates/PDB.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/coordinates
+  copying doc/sphinx/source/documentation_pages/coordinates/PDBQT.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/coordinates
+  copying doc/sphinx/source/documentation_pages/coordinates/PQR.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/coordinates
+  copying doc/sphinx/source/documentation_pages/coordinates/TNG.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/coordinates
+  copying doc/sphinx/source/documentation_pages/coordinates/TRC.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/coordinates
+  copying doc/sphinx/source/documentation_pages/coordinates/TRJ.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/coordinates
+  copying doc/sphinx/source/documentation_pages/coordinates/TRR.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/coordinates
+  copying doc/sphinx/source/documentation_pages/coordinates/TRZ.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/coordinates
+  copying doc/sphinx/source/documentation_pages/coordinates/TXYZ.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/coordinates
+  copying doc/sphinx/source/documentation_pages/coordinates/XDR.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/coordinates
+  copying doc/sphinx/source/documentation_pages/coordinates/XTC.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/coordinates
+  copying doc/sphinx/source/documentation_pages/coordinates/XYZ.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/coordinates
+  copying doc/sphinx/source/documentation_pages/coordinates/base.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/coordinates
+  copying doc/sphinx/source/documentation_pages/coordinates/chain.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/coordinates
+  copying doc/sphinx/source/documentation_pages/coordinates/chemfiles.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/coordinates
+  copying doc/sphinx/source/documentation_pages/coordinates/core.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/coordinates
+  copying doc/sphinx/source/documentation_pages/coordinates/init.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/coordinates
+  copying doc/sphinx/source/documentation_pages/coordinates/memory.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/coordinates
+  copying doc/sphinx/source/documentation_pages/coordinates/null.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/coordinates
+  copying doc/sphinx/source/documentation_pages/coordinates/pickle_readers.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/coordinates
+  copying doc/sphinx/source/documentation_pages/coordinates/timestep.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/coordinates
+  copying doc/sphinx/source/documentation_pages/visualization/streamlines.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/visualization
+  copying doc/sphinx/source/documentation_pages/visualization/streamlines_3D.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/visualization
+  copying doc/sphinx/source/documentation_pages/visualization/test_streamplot_3D.png -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/visualization
+  copying doc/sphinx/source/documentation_pages/visualization/testing_streamline.png -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/visualization
+  copying doc/sphinx/source/documentation_pages/core/accessors.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/core
+  copying doc/sphinx/source/documentation_pages/core/groups.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/core
+  copying doc/sphinx/source/documentation_pages/core/init.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/core
+  copying doc/sphinx/source/documentation_pages/core/selection.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/core
+  copying doc/sphinx/source/documentation_pages/core/topology.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/core
+  copying doc/sphinx/source/documentation_pages/core/topologyattrs.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/core
+  copying doc/sphinx/source/documentation_pages/core/topologyobjects.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/core
+  copying doc/sphinx/source/documentation_pages/core/universe.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/core
+  copying doc/sphinx/source/documentation_pages/analysis/align.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/analysis
+  copying doc/sphinx/source/documentation_pages/analysis/atomicdistances.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/analysis
+  copying doc/sphinx/source/documentation_pages/analysis/backends.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/analysis
+  copying doc/sphinx/source/documentation_pages/analysis/base.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/analysis
+  copying doc/sphinx/source/documentation_pages/analysis/bat.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/analysis
+  copying doc/sphinx/source/documentation_pages/analysis/contacts.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/analysis
+  copying doc/sphinx/source/documentation_pages/analysis/data.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/analysis
+  copying doc/sphinx/source/documentation_pages/analysis/density.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/analysis
+  copying doc/sphinx/source/documentation_pages/analysis/dielectric.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/analysis
+  copying doc/sphinx/source/documentation_pages/analysis/diffusionmap.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/analysis
+  copying doc/sphinx/source/documentation_pages/analysis/dihedrals.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/analysis
+  copying doc/sphinx/source/documentation_pages/analysis/distances.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/analysis
+  copying doc/sphinx/source/documentation_pages/analysis/dssp.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/analysis
+  copying doc/sphinx/source/documentation_pages/analysis/encore.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/analysis
+  copying doc/sphinx/source/documentation_pages/analysis/gnm.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/analysis
+  copying doc/sphinx/source/documentation_pages/analysis/hbond_autocorrel.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/analysis
+  copying doc/sphinx/source/documentation_pages/analysis/hbond_autocorrel_deprecated.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/analysis
+  copying doc/sphinx/source/documentation_pages/analysis/helix_analysis.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/analysis
+  copying doc/sphinx/source/documentation_pages/analysis/hole2.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/analysis
+  copying doc/sphinx/source/documentation_pages/analysis/hydrogenbonds.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/analysis
+  copying doc/sphinx/source/documentation_pages/analysis/leaflet.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/analysis
+  copying doc/sphinx/source/documentation_pages/analysis/legacy_modules.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/analysis
+  copying doc/sphinx/source/documentation_pages/analysis/lineardensity.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/analysis
+  copying doc/sphinx/source/documentation_pages/analysis/msd.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/analysis
+  copying doc/sphinx/source/documentation_pages/analysis/nucleicacids.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/analysis
+  copying doc/sphinx/source/documentation_pages/analysis/nuclinfo.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/analysis
+  copying doc/sphinx/source/documentation_pages/analysis/parallelization.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/analysis
+  copying doc/sphinx/source/documentation_pages/analysis/pca.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/analysis
+  copying doc/sphinx/source/documentation_pages/analysis/polymer.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/analysis
+  copying doc/sphinx/source/documentation_pages/analysis/psa.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/analysis
+  copying doc/sphinx/source/documentation_pages/analysis/rdf.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/analysis
+  copying doc/sphinx/source/documentation_pages/analysis/results.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/analysis
+  copying doc/sphinx/source/documentation_pages/analysis/rms.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/analysis
+  copying doc/sphinx/source/documentation_pages/analysis/waterdynamics.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/analysis
+  copying doc/sphinx/source/documentation_pages/analysis/wbridge_analysis.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/analysis
+  copying doc/sphinx/source/documentation_pages/auxiliary/EDR.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/auxiliary
+  copying doc/sphinx/source/documentation_pages/auxiliary/XVG.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/auxiliary
+  copying doc/sphinx/source/documentation_pages/auxiliary/base.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/auxiliary
+  copying doc/sphinx/source/documentation_pages/auxiliary/core.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/auxiliary
+  copying doc/sphinx/source/documentation_pages/auxiliary/init.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/auxiliary
+  copying doc/sphinx/source/documentation_pages/lib/formats/libdcd.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/lib/formats
+  copying doc/sphinx/source/documentation_pages/lib/formats/libmdaxdr.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/lib/formats
+  copying doc/sphinx/source/documentation_pages/analysis/encore/bootstrap.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/analysis/encore
+  copying doc/sphinx/source/documentation_pages/analysis/encore/clustering.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/analysis/encore
+  copying doc/sphinx/source/documentation_pages/analysis/encore/confdistmatrix.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/analysis/encore
+  copying doc/sphinx/source/documentation_pages/analysis/encore/covariance.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/analysis/encore
+  copying doc/sphinx/source/documentation_pages/analysis/encore/dimensionality_reduction.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/analysis/encore
+  copying doc/sphinx/source/documentation_pages/analysis/encore/similarity.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/analysis/encore
+  copying doc/sphinx/source/documentation_pages/analysis/encore/utils.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/analysis/encore
+  copying doc/sphinx/source/documentation_pages/analysis/legacy/x3dna.rst -> build/lib.linux-x86_64-cpython-311/doc/sphinx/source/documentation_pages/analysis/legacy
+  copying MDAnalysis/lib/_augment.cpp -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib
+  copying MDAnalysis/lib/_augment.pyx -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib
+  copying MDAnalysis/lib/_cutil.cpp -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib
+  copying MDAnalysis/lib/_cutil.pxd -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib
+  copying MDAnalysis/lib/_cutil.pyx -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib
+  copying MDAnalysis/lib/c_distances.c -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib
+  copying MDAnalysis/lib/c_distances.pxd -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib
+  copying MDAnalysis/lib/c_distances.pyx -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib
+  copying MDAnalysis/lib/c_distances_openmp.c -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib
+  copying MDAnalysis/lib/c_distances_openmp.pyx -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib
+  copying MDAnalysis/lib/nsgrid.cpp -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib
+  copying MDAnalysis/lib/nsgrid.pyx -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib
+  copying MDAnalysis/lib/qcprot.c -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib
+  copying MDAnalysis/lib/qcprot.pyx -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib
+  copying MDAnalysis/coordinates/timestep.cpp -> build/lib.linux-x86_64-cpython-311/MDAnalysis/coordinates
+  copying MDAnalysis/coordinates/timestep.pxd -> build/lib.linux-x86_64-cpython-311/MDAnalysis/coordinates
+  copying MDAnalysis/coordinates/timestep.pyx -> build/lib.linux-x86_64-cpython-311/MDAnalysis/coordinates
+  copying MDAnalysis/lib/libmdanalysis/__init__.pxd -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib/libmdanalysis
+  copying MDAnalysis/lib/include/calc_distances.h -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib/include
+  copying MDAnalysis/lib/formats/cython_util.c -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib/formats
+  copying MDAnalysis/lib/formats/cython_util.pxd -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib/formats
+  copying MDAnalysis/lib/formats/cython_util.pyx -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib/formats
+  copying MDAnalysis/lib/formats/libdcd.c -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib/formats
+  copying MDAnalysis/lib/formats/libdcd.pxd -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib/formats
+  copying MDAnalysis/lib/formats/libdcd.pyx -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib/formats
+  copying MDAnalysis/lib/formats/libmdaxdr.c -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib/formats
+  copying MDAnalysis/lib/formats/libmdaxdr.pxd -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib/formats
+  copying MDAnalysis/lib/formats/libmdaxdr.pyx -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib/formats
+  copying MDAnalysis/lib/src/transformations/AUTHOR -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib/src/transformations
+  copying MDAnalysis/lib/src/transformations/LICENCE -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib/src/transformations
+  copying MDAnalysis/lib/src/transformations/transformations.c -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib/src/transformations
+  copying MDAnalysis/lib/formats/include/endianswap.h -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib/formats/include
+  copying MDAnalysis/lib/formats/include/fastio.h -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib/formats/include
+  copying MDAnalysis/lib/formats/include/readdcd.h -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib/formats/include
+  copying MDAnalysis/lib/formats/include/trr_seek.h -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib/formats/include
+  copying MDAnalysis/lib/formats/include/xdrfile.h -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib/formats/include
+  copying MDAnalysis/lib/formats/include/xdrfile_trr.h -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib/formats/include
+  copying MDAnalysis/lib/formats/include/xdrfile_xtc.h -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib/formats/include
+  copying MDAnalysis/lib/formats/include/xtc_seek.h -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib/formats/include
+  copying MDAnalysis/lib/formats/src/trr_seek.c -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib/formats/src
+  copying MDAnalysis/lib/formats/src/xdrfile.c -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib/formats/src
+  copying MDAnalysis/lib/formats/src/xdrfile_trr.c -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib/formats/src
+  copying MDAnalysis/lib/formats/src/xdrfile_xtc.c -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib/formats/src
+  copying MDAnalysis/lib/formats/src/xtc_seek.c -> build/lib.linux-x86_64-cpython-311/MDAnalysis/lib/formats/src
+  copying MDAnalysis/analysis/encore/cutils.c -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis/encore
+  copying MDAnalysis/analysis/encore/cutils.pyx -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis/encore
+  copying MDAnalysis/analysis/data/janin_ref_data.npy -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis/data
+  copying MDAnalysis/analysis/data/rama_ref_data.npy -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis/data
+  copying MDAnalysis/analysis/encore/clustering/affinityprop.c -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis/encore/clustering
+  copying MDAnalysis/analysis/encore/clustering/affinityprop.pyx -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis/encore/clustering
+  copying MDAnalysis/analysis/encore/dimensionality_reduction/stochasticproxembed.c -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis/encore/dimensionality_reduction
+  copying MDAnalysis/analysis/encore/dimensionality_reduction/stochasticproxembed.pyx -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis/encore/dimensionality_reduction
+  copying MDAnalysis/analysis/encore/clustering/include/ap.h -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis/encore/clustering/include
+  copying MDAnalysis/analysis/encore/clustering/src/ap.c -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis/encore/clustering/src
+  copying MDAnalysis/analysis/encore/dimensionality_reduction/include/spe.h -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis/encore/dimensionality_reduction/include
+  copying MDAnalysis/analysis/encore/dimensionality_reduction/src/spe.c -> build/lib.linux-x86_64-cpython-311/MDAnalysis/analysis/encore/dimensionality_reduction/src
+  running build_ext
+  building 'MDAnalysis.lib.formats.libdcd' extension
+  gcc -pthread -B /home/lwoods/miniconda3/envs/tmp/compiler_compat -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /home/lwoods/miniconda3/envs/tmp/include -fPIC -O2 -isystem /home/lwoods/miniconda3/envs/tmp/include -fPIC -I/home/lwoods/workspace/mdanalysis/package/MDAnalysis/lib/formats -I/tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include -I/home/lwoods/workspace/mdanalysis/package/MDAnalysis/lib/formats/include -I/home/lwoods/miniconda3/envs/tmp/include/python3.11 -c MDAnalysis/lib/formats/libdcd.c -o build/temp.linux-x86_64-cpython-311/MDAnalysis/lib/formats/libdcd.o -std=c11 -O3 -funroll-loops -fsigned-zeros
+  In file included from MDAnalysis/lib/formats/libdcd.c:1268:
+  MDAnalysis/lib/formats/include/readdcd.h: In function ‘write_dcdheader’:
+  MDAnalysis/lib/formats/include/readdcd.h:698:14: warning: unused variable ‘tmbuf’ [-Wunused-variable]
+     struct tm *tmbuf;
+                ^~~~~
+  MDAnalysis/lib/formats/include/readdcd.h:697:10: warning: unused variable ‘cur_time’ [-Wunused-variable]
+     time_t cur_time;
+            ^~~~~~~~
+  In file included from MDAnalysis/lib/formats/include/readdcd.h:25,
+                   from MDAnalysis/lib/formats/libdcd.c:1268:
+  At top level:
+  MDAnalysis/lib/formats/include/endianswap.h:96:13: warning: ‘swap2_aligned’ defined but not used [-Wunused-function]
+   static void swap2_aligned(void *v, long ndata) {
+               ^~~~~~~~~~~~~
+  MDAnalysis/lib/formats/include/endianswap.h:32:13: warning: ‘swap2_unaligned’ defined but not used [-Wunused-function]
+   static void swap2_unaligned(void *v, long ndata) {
+               ^~~~~~~~~~~~~~~
+  In file included from MDAnalysis/lib/formats/libdcd.c:1267:
+  MDAnalysis/lib/formats/include/fastio.h:453:12: warning: ‘fio_write_str’ defined but not used [-Wunused-function]
+   static int fio_write_str(fio_fd fd, const char *str) {
+              ^~~~~~~~~~~~~
+  MDAnalysis/lib/formats/include/fastio.h:449:12: warning: ‘fio_read_int32’ defined but not used [-Wunused-function]
+   static int fio_read_int32(fio_fd fd, int *i) {
+              ^~~~~~~~~~~~~~
+  gcc -pthread -B /home/lwoods/miniconda3/envs/tmp/compiler_compat -shared -Wl,--allow-shlib-undefined -Wl,-rpath,/home/lwoods/miniconda3/envs/tmp/lib -Wl,-rpath-link,/home/lwoods/miniconda3/envs/tmp/lib -L/home/lwoods/miniconda3/envs/tmp/lib -Wl,--allow-shlib-undefined -Wl,-rpath,/home/lwoods/miniconda3/envs/tmp/lib -Wl,-rpath-link,/home/lwoods/miniconda3/envs/tmp/lib -L/home/lwoods/miniconda3/envs/tmp/lib build/temp.linux-x86_64-cpython-311/MDAnalysis/lib/formats/libdcd.o -o build/lib.linux-x86_64-cpython-311/MDAnalysis/lib/formats/libdcd.cpython-311-x86_64-linux-gnu.so
+  building 'MDAnalysis.lib.c_distances' extension
+  gcc -pthread -B /home/lwoods/miniconda3/envs/tmp/compiler_compat -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /home/lwoods/miniconda3/envs/tmp/include -fPIC -O2 -isystem /home/lwoods/miniconda3/envs/tmp/include -fPIC -I/tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include -I/home/lwoods/workspace/mdanalysis/package/MDAnalysis/lib/include -I/home/lwoods/miniconda3/envs/tmp/include/python3.11 -c MDAnalysis/lib/c_distances.c -o build/temp.linux-x86_64-cpython-311/MDAnalysis/lib/c_distances.o -std=c11 -O3 -funroll-loops -fsigned-zeros
+  gcc -pthread -B /home/lwoods/miniconda3/envs/tmp/compiler_compat -shared -Wl,--allow-shlib-undefined -Wl,-rpath,/home/lwoods/miniconda3/envs/tmp/lib -Wl,-rpath-link,/home/lwoods/miniconda3/envs/tmp/lib -L/home/lwoods/miniconda3/envs/tmp/lib -Wl,--allow-shlib-undefined -Wl,-rpath,/home/lwoods/miniconda3/envs/tmp/lib -Wl,-rpath-link,/home/lwoods/miniconda3/envs/tmp/lib -L/home/lwoods/miniconda3/envs/tmp/lib build/temp.linux-x86_64-cpython-311/MDAnalysis/lib/c_distances.o -lm -o build/lib.linux-x86_64-cpython-311/MDAnalysis/lib/c_distances.cpython-311-x86_64-linux-gnu.so
+  building 'MDAnalysis.lib.c_distances_openmp' extension
+  gcc -pthread -B /home/lwoods/miniconda3/envs/tmp/compiler_compat -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /home/lwoods/miniconda3/envs/tmp/include -fPIC -O2 -isystem /home/lwoods/miniconda3/envs/tmp/include -fPIC -DPARALLEL -I/tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include -I/home/lwoods/workspace/mdanalysis/package/MDAnalysis/lib/include -I/home/lwoods/miniconda3/envs/tmp/include/python3.11 -c MDAnalysis/lib/c_distances_openmp.c -o build/temp.linux-x86_64-cpython-311/MDAnalysis/lib/c_distances_openmp.o -fopenmp -std=c11 -O3 -funroll-loops -fsigned-zeros
+  gcc -pthread -B /home/lwoods/miniconda3/envs/tmp/compiler_compat -shared -Wl,--allow-shlib-undefined -Wl,-rpath,/home/lwoods/miniconda3/envs/tmp/lib -Wl,-rpath-link,/home/lwoods/miniconda3/envs/tmp/lib -L/home/lwoods/miniconda3/envs/tmp/lib -Wl,--allow-shlib-undefined -Wl,-rpath,/home/lwoods/miniconda3/envs/tmp/lib -Wl,-rpath-link,/home/lwoods/miniconda3/envs/tmp/lib -L/home/lwoods/miniconda3/envs/tmp/lib build/temp.linux-x86_64-cpython-311/MDAnalysis/lib/c_distances_openmp.o -lm -lgomp -o build/lib.linux-x86_64-cpython-311/MDAnalysis/lib/c_distances_openmp.cpython-311-x86_64-linux-gnu.so -fopenmp
+  building 'MDAnalysis.lib.qcprot' extension
+  gcc -pthread -B /home/lwoods/miniconda3/envs/tmp/compiler_compat -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /home/lwoods/miniconda3/envs/tmp/include -fPIC -O2 -isystem /home/lwoods/miniconda3/envs/tmp/include -fPIC -I/tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include -I/home/lwoods/miniconda3/envs/tmp/include/python3.11 -c MDAnalysis/lib/qcprot.c -o build/temp.linux-x86_64-cpython-311/MDAnalysis/lib/qcprot.o -std=c11 -O3 -funroll-loops -fsigned-zeros
+  gcc -pthread -B /home/lwoods/miniconda3/envs/tmp/compiler_compat -shared -Wl,--allow-shlib-undefined -Wl,-rpath,/home/lwoods/miniconda3/envs/tmp/lib -Wl,-rpath-link,/home/lwoods/miniconda3/envs/tmp/lib -L/home/lwoods/miniconda3/envs/tmp/lib -Wl,--allow-shlib-undefined -Wl,-rpath,/home/lwoods/miniconda3/envs/tmp/lib -Wl,-rpath-link,/home/lwoods/miniconda3/envs/tmp/lib -L/home/lwoods/miniconda3/envs/tmp/lib build/temp.linux-x86_64-cpython-311/MDAnalysis/lib/qcprot.o -o build/lib.linux-x86_64-cpython-311/MDAnalysis/lib/qcprot.cpython-311-x86_64-linux-gnu.so
+  building 'MDAnalysis.lib._transformations' extension
+  gcc -pthread -B /home/lwoods/miniconda3/envs/tmp/compiler_compat -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /home/lwoods/miniconda3/envs/tmp/include -fPIC -O2 -isystem /home/lwoods/miniconda3/envs/tmp/include -fPIC -I/tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include -I/home/lwoods/miniconda3/envs/tmp/include/python3.11 -c MDAnalysis/lib/src/transformations/transformations.c -o build/temp.linux-x86_64-cpython-311/MDAnalysis/lib/src/transformations/transformations.o -std=c11 -O3 -funroll-loops -fsigned-zeros
+  In file included from /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayobject.h:5,
+                   from MDAnalysis/lib/src/transformations/transformations.c:73:
+  MDAnalysis/lib/src/transformations/transformations.c: In function ‘PyConverter_DoubleArray’:
+  MDAnalysis/lib/src/transformations/transformations.c:778:53: error: ‘NPY_IN_ARRAY’ undeclared (first use in this function); did you mean ‘NPY_FR_ERROR’?
+       *address = PyArray_FROM_OTF(object, NPY_DOUBLE, NPY_IN_ARRAY);
+                                                       ^~~~~~~~~~~~
+  /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h:91:28: note: in definition of macro ‘PyArray_FROM_OTF’
+                           (((flags) & NPY_ARRAY_ENSURECOPY) ? \
+                              ^~~~~
+  MDAnalysis/lib/src/transformations/transformations.c:778:53: note: each undeclared identifier is reported only once for each function it appears in
+       *address = PyArray_FROM_OTF(object, NPY_DOUBLE, NPY_IN_ARRAY);
+                                                       ^~~~~~~~~~~~
+  /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h:91:28: note: in definition of macro ‘PyArray_FROM_OTF’
+                           (((flags) & NPY_ARRAY_ENSURECOPY) ? \
+                              ^~~~~
+  MDAnalysis/lib/src/transformations/transformations.c: In function ‘PyConverter_AnyDoubleArray’:
+  MDAnalysis/lib/src/transformations/transformations.c:794:57: error: ‘NPY_ALIGNED’ undeclared (first use in this function); did you mean ‘Py_ALIGNED’?
+           *address = PyArray_FROM_OTF(object, NPY_DOUBLE, NPY_ALIGNED);
+                                                           ^~~~~~~~~~~
+  /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h:91:28: note: in definition of macro ‘PyArray_FROM_OTF’
+                           (((flags) & NPY_ARRAY_ENSURECOPY) ? \
+                              ^~~~~
+  MDAnalysis/lib/src/transformations/transformations.c: In function ‘PyConverter_DoubleArrayOrNone’:
+  MDAnalysis/lib/src/transformations/transformations.c:811:57: error: ‘NPY_IN_ARRAY’ undeclared (first use in this function); did you mean ‘NPY_FR_ERROR’?
+           *address = PyArray_FROM_OTF(object, NPY_DOUBLE, NPY_IN_ARRAY);
+                                                           ^~~~~~~~~~~~
+  /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h:91:28: note: in definition of macro ‘PyArray_FROM_OTF’
+                           (((flags) & NPY_ARRAY_ENSURECOPY) ? \
+                              ^~~~~
+  MDAnalysis/lib/src/transformations/transformations.c: In function ‘PyConverter_DoubleMatrix44’:
+  MDAnalysis/lib/src/transformations/transformations.c:826:53: error: ‘NPY_IN_ARRAY’ undeclared (first use in this function); did you mean ‘NPY_FR_ERROR’?
+       *address = PyArray_FROM_OTF(object, NPY_DOUBLE, NPY_IN_ARRAY);
+                                                       ^~~~~~~~~~~~
+  /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h:91:28: note: in definition of macro ‘PyArray_FROM_OTF’
+                           (((flags) & NPY_ARRAY_ENSURECOPY) ? \
+                              ^~~~~
+  MDAnalysis/lib/src/transformations/transformations.c: In function ‘PyConverter_DoubleMatrix44Copy’:
+  MDAnalysis/lib/src/transformations/transformations.c:849:33: error: ‘NPY_ENSURECOPY’ undeclared (first use in this function); did you mean ‘NPY_ITER_COPY’?
+                                   NPY_ENSURECOPY|NPY_IN_ARRAY);
+                                   ^~~~~~~~~~~~~~
+  /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h:91:28: note: in definition of macro ‘PyArray_FROM_OTF’
+                           (((flags) & NPY_ARRAY_ENSURECOPY) ? \
+                              ^~~~~
+  MDAnalysis/lib/src/transformations/transformations.c:849:48: error: ‘NPY_IN_ARRAY’ undeclared (first use in this function); did you mean ‘NPY_FR_ERROR’?
+                                   NPY_ENSURECOPY|NPY_IN_ARRAY);
+                                                  ^~~~~~~~~~~~
+  /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h:91:28: note: in definition of macro ‘PyArray_FROM_OTF’
+                           (((flags) & NPY_ARRAY_ENSURECOPY) ? \
+                              ^~~~~
+  MDAnalysis/lib/src/transformations/transformations.c: In function ‘PyConverter_DoubleVector3’:
+  MDAnalysis/lib/src/transformations/transformations.c:871:53: error: ‘NPY_IN_ARRAY’ undeclared (first use in this function); did you mean ‘NPY_FR_ERROR’?
+       *address = PyArray_FROM_OTF(object, NPY_DOUBLE, NPY_IN_ARRAY);
+                                                       ^~~~~~~~~~~~
+  /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h:91:28: note: in definition of macro ‘PyArray_FROM_OTF’
+                           (((flags) & NPY_ARRAY_ENSURECOPY) ? \
+                              ^~~~~
+  MDAnalysis/lib/src/transformations/transformations.c: In function ‘PyConverter_DoubleVector4’:
+  MDAnalysis/lib/src/transformations/transformations.c:893:53: error: ‘NPY_IN_ARRAY’ undeclared (first use in this function); did you mean ‘NPY_FR_ERROR’?
+       *address = PyArray_FROM_OTF(object, NPY_DOUBLE, NPY_IN_ARRAY);
+                                                       ^~~~~~~~~~~~
+  /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h:91:28: note: in definition of macro ‘PyArray_FROM_OTF’
+                           (((flags) & NPY_ARRAY_ENSURECOPY) ? \
+                              ^~~~~
+  MDAnalysis/lib/src/transformations/transformations.c: In function ‘PyConverter_DoubleVector4Copy’:
+  MDAnalysis/lib/src/transformations/transformations.c:916:33: error: ‘NPY_ENSURECOPY’ undeclared (first use in this function); did you mean ‘NPY_ITER_COPY’?
+                                   NPY_ENSURECOPY|NPY_IN_ARRAY);
+                                   ^~~~~~~~~~~~~~
+  /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h:91:28: note: in definition of macro ‘PyArray_FROM_OTF’
+                           (((flags) & NPY_ARRAY_ENSURECOPY) ? \
+                              ^~~~~
+  MDAnalysis/lib/src/transformations/transformations.c:916:48: error: ‘NPY_IN_ARRAY’ undeclared (first use in this function); did you mean ‘NPY_FR_ERROR’?
+                                   NPY_ENSURECOPY|NPY_IN_ARRAY);
+                                                  ^~~~~~~~~~~~
+  /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h:91:28: note: in definition of macro ‘PyArray_FROM_OTF’
+                           (((flags) & NPY_ARRAY_ENSURECOPY) ? \
+                              ^~~~~
+  MDAnalysis/lib/src/transformations/transformations.c: In function ‘PyConverter_DoubleVector3OrNone’:
+  MDAnalysis/lib/src/transformations/transformations.c:941:57: error: ‘NPY_IN_ARRAY’ undeclared (first use in this function); did you mean ‘NPY_FR_ERROR’?
+           *address = PyArray_FROM_OTF(object, NPY_DOUBLE, NPY_IN_ARRAY);
+                                                           ^~~~~~~~~~~~
+  /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h:91:28: note: in definition of macro ‘PyArray_FROM_OTF’
+                           (((flags) & NPY_ARRAY_ENSURECOPY) ? \
+                              ^~~~~
+  MDAnalysis/lib/src/transformations/transformations.c: In function ‘py_superimposition_matrix’:
+  MDAnalysis/lib/src/transformations/transformations.c:1837: warning: ignoring #pragma vector always [-Wunknown-pragmas]
+                   #pragma vector always
+
+  MDAnalysis/lib/src/transformations/transformations.c:1954: warning: ignoring #pragma vector always [-Wunknown-pragmas]
+                       #pragma vector always
+
+  MDAnalysis/lib/src/transformations/transformations.c:1978: warning: ignoring #pragma vector always [-Wunknown-pragmas]
+                       #pragma vector always
+
+  In file included from /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/arrayobject.h:5,
+                   from MDAnalysis/lib/src/transformations/transformations.c:73:
+  MDAnalysis/lib/src/transformations/transformations.c: In function ‘py_inverse_matrix’:
+  MDAnalysis/lib/src/transformations/transformations.c:3140:48: error: ‘NPY_IN_ARRAY’ undeclared (first use in this function); did you mean ‘NPY_FR_ERROR’?
+                                                  NPY_IN_ARRAY);
+                                                  ^~~~~~~~~~~~
+  /tmp/pip-build-env-t82x0xb6/overlay/lib/python3.11/site-packages/numpy/_core/include/numpy/ndarrayobject.h:91:28: note: in definition of macro ‘PyArray_FROM_OTF’
+                           (((flags) & NPY_ARRAY_ENSURECOPY) ? \
+                              ^~~~~
+  MDAnalysis/lib/src/transformations/transformations.c: In function ‘py_vector_norm’:
+  MDAnalysis/lib/src/transformations/transformations.c:3414: warning: ignoring #pragma vector always [-Wunknown-pragmas]
+               #pragma vector always
+
+  MDAnalysis/lib/src/transformations/transformations.c:3495: warning: ignoring #pragma vector always [-Wunknown-pragmas]
+                   #pragma vector always
+
+  MDAnalysis/lib/src/transformations/transformations.c: In function ‘py_unit_vector’:
+  MDAnalysis/lib/src/transformations/transformations.c:3597: warning: ignoring #pragma vector always [-Wunknown-pragmas]
+               #pragma vector always
+
+  MDAnalysis/lib/src/transformations/transformations.c:3602: warning: ignoring #pragma vector always [-Wunknown-pragmas]
+               #pragma vector always
+
+  MDAnalysis/lib/src/transformations/transformations.c:3666: warning: ignoring #pragma vector always [-Wunknown-pragmas]
+                   #pragma vector always
+
+  MDAnalysis/lib/src/transformations/transformations.c:3671: warning: ignoring #pragma vector always [-Wunknown-pragmas]
+                   #pragma vector always
+
+  At top level:
+  MDAnalysis/lib/src/transformations/transformations.c:910:1: warning: ‘PyConverter_DoubleVector4Copy’ defined but not used [-Wunused-function]
+   PyConverter_DoubleVector4Copy(
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  MDAnalysis/lib/src/transformations/transformations.c:804:1: warning: ‘PyConverter_DoubleArrayOrNone’ defined but not used [-Wunused-function]
+   PyConverter_DoubleArrayOrNone(
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  MDAnalysis/lib/src/transformations/transformations.c:774:1: warning: ‘PyConverter_DoubleArray’ defined but not used [-Wunused-function]
+   PyConverter_DoubleArray(
+   ^~~~~~~~~~~~~~~~~~~~~~~
+  error: command '/usr/bin/gcc' failed with exit code 1
+  error: subprocess-exited-with-error
+  
+  × Building wheel for MDAnalysis (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> See above for output.
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  full command: /home/lwoods/miniconda3/envs/tmp/bin/python3.11 /home/lwoods/miniconda3/envs/tmp/lib/python3.11/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py build_wheel /tmp/tmpm_0jjbs2
+  cwd: /home/lwoods/workspace/mdanalysis/package
+  Building wheel for MDAnalysis (pyproject.toml): finished with status 'error'
+  ERROR: Failed building wheel for MDAnalysis
+Failed to build MDAnalysis
+ERROR: Failed to build installable wheels for some pyproject.toml based projects (MDAnalysis)
