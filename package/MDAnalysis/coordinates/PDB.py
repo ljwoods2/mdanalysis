@@ -157,6 +157,13 @@ from . import base
 from .timestep import Timestep
 from ..exceptions import NoDataError
 
+try:
+    import s3fs
+except ImportError:
+    HAS_S3FS = False
+else:
+    HAS_S3FS = True
+
 
 logger = logging.getLogger("MDAnalysis.coordinates.PBD")
 
@@ -278,6 +285,12 @@ class PDBReader(base.ReaderBase):
         frame numbers.
         """
         super(PDBReader, self).__init__(filename, **kwargs)
+        
+        if HAS_S3FS:
+            if isinstance(filename, s3fs.S3File):
+                self.filename = filename
+                self._s3fs = filename.fs
+                self._fname = filename.bucket + "/" + filename.key
 
         try:
             self.n_atoms = kwargs['n_atoms']
@@ -379,8 +392,12 @@ class PDBReader(base.ReaderBase):
     def _reopen(self):
         # Pretend the current TS is -1 (in 0 based) so "next" is the
         # 0th frame
-        self.close()
-        self._pdbfile = util.anyopen(self.filename, 'rb')
+        if HAS_S3FS:
+            if isinstance(self._pdbfile, s3fs.S3File):
+                self._pdbfile = s3fs.S3File(self._s3fs, self._fname)
+                self._pdbfile = util.anyopen(self._pdbfile, 'rb')
+        else:
+            self._pdbfile = util.anyopen(self.filename, 'rb')
         self.ts.frame = -1
 
     def _read_next_timestep(self, ts=None):
