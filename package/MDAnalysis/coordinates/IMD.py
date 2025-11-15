@@ -136,16 +136,17 @@ import warnings
 
 from MDAnalysis.coordinates import core
 from MDAnalysis.lib.util import store_init_arguments
-from MDAnalysis.coordinates.base import StreamReaderBase
+from MDAnalysis.coordinates.base import StreamReaderBase, WriterBase
 
 
 from packaging.version import Version
 
-MIN_IMDCLIENT_VERSION = Version("0.2.2")
+MIN_IMDCLIENT_VERSION = Version("0.2.3")
 
 try:
     import imdclient
     from imdclient.IMDClient import IMDClient
+    from imdclient.IMDServer import IMDServer
     from imdclient.utils import parse_host_port
 except ImportError:
     HAS_IMDCLIENT = False
@@ -157,15 +158,19 @@ except ImportError:
     class MockIMDClient:
         pass
 
+    class MockIMDServer:
+        pass
+
     imdclient = types.ModuleType("imdclient")
     imdclient.IMDClient = MockIMDClient
+    imdclient.IMDServer = MockIMDServer
     imdclient.__version__ = "0.0.0"
 
 else:
     HAS_IMDCLIENT = True
     imdclient_version = Version(imdclient.__version__)
 
-    # Check for compatibility: currently needs to be >=0.2.2
+    # Check for compatibility: currently needs to be >=0.2.4
     if imdclient_version < MIN_IMDCLIENT_VERSION:
         warnings.warn(
             f"imdclient version {imdclient_version} is too old; "
@@ -175,7 +180,7 @@ else:
         )
         HAS_IMDCLIENT = False
 
-logger = logging.getLogger("MDAnalysis.coordinates.IMDReader")
+logger = logging.getLogger(__name__)
 
 
 class IMDReader(StreamReaderBase):
@@ -332,3 +337,103 @@ class IMDReader(StreamReaderBase):
         if self._imdclient is not None:
             self._imdclient.stop()
         logger.debug("IMDReader shut down gracefully.")
+
+
+class IMDWriter(WriterBase):
+
+    format = "IMD"
+    multiframe = True
+
+    def __init__(
+        self,
+        filename,
+        n_atoms,
+        version=3,
+        time=True,
+        box=True,
+        positions=True,
+        velocities=False,
+        forces=False,
+        **kwargs,
+    ):
+        if n_atoms is None or n_atoms < 0:
+            raise ValueError("IMDWriter: Positive value for `n_atoms` arg required")
+        host, port = parse_host_port(filename)
+        self.n_atoms = n_atoms
+
+        if version == 2 and (time or box or velocities or forces):
+            warnings.warn("IMDWriter: IMDv2 selected but attempting to send time, box, velocities, or forces." +
+                        "Only positions will be sent")
+            time, box, velocities, forces = False, False, False, False
+        self._server = IMDServer(n_atoms, version=version, host=host, port=port, time=time, box=box, positions=positions, velocities=velocities, forces=forces)
+        self._imdframe = self._server.alloc_empty_imdframe()
+        self._sinfo = self._server.sinfo
+        self._first_frame = True
+
+    def _write_next_frame(self, ag):
+        try:
+            # Atomgroup?
+            ts = ag.ts
+        except AttributeError:
+            try:
+                # Universe?
+                ts = ag.trajectory.ts
+            except AttributeError:
+                errmsg = "Input obj is neither an AtomGroup or Universe"
+                raise TypeError(errmsg) from None
+
+        if ts.n_atoms != self.n_atoms:
+            raise IOError(
+                "IMDWriter: Timestep does not have"
+                " the correct number of atoms"
+            )
+        return self._write_next_timestep(ts)
+
+    def _write_next_timestep(self, ts):
+        
+        self._load_ts_into_imdframe(ts)
+        self._server.write_imdframe(self._imdframe)
+        if self._first_frame:
+            self._first_frame = False
+
+    def _load_ts_into_imdframe(self, ts):
+        
+        if self._sinfo.time:
+            
+            if ts.time is None:
+                raise ValueError("IMDWriter: `time=True` but timestep does not contain time, dt, and step information")
+            self._imdframe.time = ts.time
+            
+            if ts.data["dt"] is None:
+                if self._first_frame:
+                    warnings.warn("IMDWriter: `time=True` but timestep does not contain dt information, using placeholder value")
+                self._imdframe.dt = 0.0
+            else:
+                self._imdframe.dt = ts.data["dt"]
+            
+            if ts.data["step"] is None and self._first_frame:
+                if self._first_frame:
+                    warnings.warn("IMDWriter: `time=True` but timestep does not contain integration step information, using placeholder value")
+                self._imdframe.step = int(ts.time)
+            else:
+                self._imdframe.dt = ts.data["dt"]
+
+        if self._sinfo.box:
+            if ts.triclinic_dimensions is None:
+                raise ValueError("IMDWriter: `box=True` but timestep does not contain box information")
+            self._imdframe.box = ts.triclinic_dimensions
+        if self._sinfo.positions:
+            if not ts.has_positions:
+                raise ValueError("IMDWriter: `positions=True` but timestep does not contain positions")
+            self._imdframe.positions = ts.positions
+        if self._sinfo.velocities:
+            if not ts.has_velocities:
+                raise ValueError("IMDWriter: `velocities=True` but timestep does not contain velocities")
+            self._imdframe.velocities = ts.velocities
+        if self._sinfo.forces:
+            if not ts.has_forces:
+                raise ValueError("IMDWriter: `forces=True` but timestep does not contain forces")
+            self._imdframe.forces = ts.forces
+
+    def close(self):
+        self._server.stop()

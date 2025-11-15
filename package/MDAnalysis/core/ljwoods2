@@ -1,0 +1,50 @@
+import MDAnalysis as mda
+from MDAnalysis.tests.datafiles import PSF, DCD, PDB, XTC, CRD
+import numpy as np
+
+cdx = np.random.random(3341*3*10).reshape(-1, 3341, 3).astype(np.float32) * 10
+
+u = mda.Universe(PSF, [DCD, CRD, DCD])
+u = mda.Universe(PSF, (cdx, cdx))
+
+print(u.trajectory)
+
+print(u.trajectory.filenames)
+"""
+topology and trajectory filename are different
+u.filename is topology filename
+
+coordinates in init can be either a filename or an array
+u.trajectory is a reference to a memory object wit a filename
+
+
+when memory reader gets created, None is passed as its filename
+when chain reader gets created, it gets fuked
+
+1. Universe is created. since trajectory is array, format = None
+
+2. In init, load_new creates the trajectory
+
+3. load_new calls get_reader_for which returns a chainreader
+
+4. chainreader gets called with (filename=(nparray), format=None)
+
+5. chainreader calls reader(filename)
+
+3. This trajectory 
+
+which is a reference to a 
+   chainreader object
+
+
+2. 
+
+        #self.filenames = np.empty((1,3))
+        #for i in range(len(filenames)):
+        #    if isinstance(filenames[i], tuple):
+        #        self.filenames[0][i] = filenames[i][0]
+        #    elif isinstance(filenames[i], np.ndarray):
+        #        self.filenames[0][i] = "None"
+        #    else:
+        #        self.filenames[0][i] = filenames[i]
+"""

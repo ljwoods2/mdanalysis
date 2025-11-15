@@ -1,0 +1,909 @@
+Results of doctest builder run on 2023-12-17 15:17:44
+=====================================================
+
+Document: documentation_pages/analysis/align
+--------------------------------------------
+**********************************************************************
+File "None", line ?, in default
+Failed example:
+    rmsd(mobile.select_atoms('name CA').positions, ref.select_atoms('name CA').positions, center=True)
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest default[0]>", line 1, in <module>
+        rmsd(mobile.select_atoms('name CA').positions, ref.select_atoms('name CA').positions, center=True)
+    NameError: name 'rmsd' is not defined
+**********************************************************************
+File "None", line ?, in default
+Failed example:
+    rmsd(mobile.select_atoms('name CA').positions, ref.select_atoms('name CA').positions,
+         superposition=True)
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest default[0]>", line 1, in <module>
+        rmsd(mobile.select_atoms('name CA').positions, ref.select_atoms('name CA').positions,
+    NameError: name 'rmsd' is not defined
+**********************************************************************
+1 items had failures:
+   2 of   2 in default
+2 tests in 1 items.
+0 passed and 2 failed.
+***Test Failed*** 2 failures.
+
+Document: documentation_pages/converters/OpenMM
+-----------------------------------------------
+**********************************************************************
+File "None", line ?, in default
+Failed example:
+    import openmm.app as app
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest default[0]>", line 1, in <module>
+        import openmm.app as app
+    ModuleNotFoundError: No module named 'openmm'
+**********************************************************************
+File "None", line ?, in default
+Failed example:
+    pdbxfile = app.PDBxFile(PDBX)
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest default[3]>", line 1, in <module>
+        pdbxfile = app.PDBxFile(PDBX)
+    NameError: name 'app' is not defined
+**********************************************************************
+File "None", line ?, in default
+Failed example:
+    mda.Universe(pdbxfile)
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest default[4]>", line 1, in <module>
+        mda.Universe(pdbxfile)
+    NameError: name 'pdbxfile' is not defined
+**********************************************************************
+1 items had failures:
+   3 of   5 in default
+5 tests in 1 items.
+2 passed and 3 failed.
+***Test Failed*** 3 failures.
+
+Document: documentation_pages/analysis/base
+-------------------------------------------
+1 items passed all tests:
+   8 tests in default
+8 tests in 1 items.
+8 passed and 0 failed.
+Test passed.
+
+Document: documentation_pages/lib/transformations
+-------------------------------------------------
+1 items passed all tests:
+ 160 tests in default
+160 tests in 1 items.
+160 passed and 0 failed.
+Test passed.
+
+Document: documentation_pages/analysis/psa
+------------------------------------------
+1 items passed all tests:
+  43 tests in default
+43 tests in 1 items.
+43 passed and 0 failed.
+Test passed.
+
+Document: documentation_pages/analysis/pca
+------------------------------------------
+**********************************************************************
+File "../../../MDAnalysis/analysis/pca.py", line ?, in default (setup code)
+Failed example:
+    >>> import MDAnalysis as mda
+    >>> import MDAnalysis.analysis.pca as pca
+    >>> from MDAnalysis.tests.datafiles import PSF, DCD
+    >>> u = mda.Universe(PSF, DCD)
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/site-packages/sphinx/ext/doctest.py", line 484, in compile
+        return compile(code, name, self.type, flags, dont_inherit)
+      File "<doctest default (setup code)[0]>", line 1
+        >>> import MDAnalysis as mda
+        ^^
+    SyntaxError: invalid syntax
+**********************************************************************
+File "../../../MDAnalysis/analysis/pca.py", line ?, in default (setup code)
+Failed example:
+    >>> import MDAnalysis as mda
+    >>> import MDAnalysis.analysis.pca as pca
+    >>> from MDAnalysis.tests.datafiles import PSF, DCD
+    >>> u = mda.Universe(PSF, DCD)
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/site-packages/sphinx/ext/doctest.py", line 484, in compile
+        return compile(code, name, self.type, flags, dont_inherit)
+      File "<doctest default (setup code)[1]>", line 1
+        >>> import MDAnalysis as mda
+        ^^
+    SyntaxError: invalid syntax
+**********************************************************************
+1 items had failures:
+   2 of   2 in default (setup code)
+***Test Failed*** 2 failures.
+
+Document: documentation_pages/lib/util
+--------------------------------------
+1 items passed all tests:
+  30 tests in default
+30 tests in 1 items.
+30 passed and 0 failed.
+Test passed.
+
+Document: documentation_pages/core/groups
+-----------------------------------------
+**********************************************************************
+File "../../../MDAnalysis/core/groups.py", line ?, in default
+Failed example:
+    g_pickled = pickle.loads(pickle.dumps(g))
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest default[0]>", line 1, in <module>
+        g_pickled = pickle.loads(pickle.dumps(g))
+    NameError: name 'pickle' is not defined
+**********************************************************************
+File "../../../MDAnalysis/core/groups.py", line ?, in default
+Failed example:
+    print("g_pickled.universe is u: ", u is g_pickled.universe)
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest default[1]>", line 1, in <module>
+        print("g_pickled.universe is u: ", u is g_pickled.universe)
+    NameError: name 'g_pickled' is not defined
+**********************************************************************
+File "../../../MDAnalysis/core/groups.py", line ?, in default
+Failed example:
+    g_pickled, u_pickled = pickle.load(pickle.dumps(g, u))
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest default[0]>", line 1, in <module>
+        g_pickled, u_pickled = pickle.load(pickle.dumps(g, u))
+    NameError: name 'pickle' is not defined
+**********************************************************************
+File "../../../MDAnalysis/core/groups.py", line ?, in default
+Failed example:
+    print("g_pickled.universe is u_pickled: ",
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/site-packages/sphinx/ext/doctest.py", line 484, in compile
+        return compile(code, name, self.type, flags, dont_inherit)
+      File "<doctest default[1]>", line 1
+        print("g_pickled.universe is u_pickled: ",
+             ^
+    SyntaxError: '(' was never closed
+**********************************************************************
+File "../../../MDAnalysis/core/groups.py", line ?, in default
+Failed example:
+          u_pickle is g_pickled.universe)
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/site-packages/sphinx/ext/doctest.py", line 484, in compile
+        return compile(code, name, self.type, flags, dont_inherit)
+      File "<doctest default[2]>", line 1
+        u_pickle is g_pickled.universe)
+    IndentationError: unexpected indent
+**********************************************************************
+File "../../../MDAnalysis/core/groups.py", line ?, in default
+Failed example:
+    g_pickled = pickle.loads(pickle.dumps(g))
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest default[0]>", line 1, in <module>
+        g_pickled = pickle.loads(pickle.dumps(g))
+    NameError: name 'pickle' is not defined
+**********************************************************************
+File "../../../MDAnalysis/core/groups.py", line ?, in default
+Failed example:
+    h_pickled = pickle.loads(pickle.dumps(h))
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest default[1]>", line 1, in <module>
+        h_pickled = pickle.loads(pickle.dumps(h))
+    NameError: name 'pickle' is not defined
+**********************************************************************
+File "../../../MDAnalysis/core/groups.py", line ?, in default
+Failed example:
+    print("g_pickled.universe is h_pickled.universe : ",
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/site-packages/sphinx/ext/doctest.py", line 484, in compile
+        return compile(code, name, self.type, flags, dont_inherit)
+      File "<doctest default[2]>", line 1
+        print("g_pickled.universe is h_pickled.universe : ",
+             ^
+    SyntaxError: '(' was never closed
+**********************************************************************
+File "../../../MDAnalysis/core/groups.py", line ?, in default
+Failed example:
+          g_pickled.universe is h_pickled.universe)
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/site-packages/sphinx/ext/doctest.py", line 484, in compile
+        return compile(code, name, self.type, flags, dont_inherit)
+      File "<doctest default[3]>", line 1
+        g_pickled.universe is h_pickled.universe)
+    IndentationError: unexpected indent
+**********************************************************************
+File "../../../MDAnalysis/core/groups.py", line ?, in default
+Failed example:
+    g_pickled, h_pickled = pickle.load(pickle.dumps(g, h))
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest default[0]>", line 1, in <module>
+        g_pickled, h_pickled = pickle.load(pickle.dumps(g, h))
+    NameError: name 'pickle' is not defined
+**********************************************************************
+File "../../../MDAnalysis/core/groups.py", line ?, in default
+Failed example:
+    print("g_pickled.universe is h_pickled.universe: ",
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/site-packages/sphinx/ext/doctest.py", line 484, in compile
+        return compile(code, name, self.type, flags, dont_inherit)
+      File "<doctest default[1]>", line 1
+        print("g_pickled.universe is h_pickled.universe: ",
+             ^
+    SyntaxError: '(' was never closed
+**********************************************************************
+File "../../../MDAnalysis/core/groups.py", line ?, in default
+Failed example:
+          g_pickle.universe is h_pickled.universe)
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/site-packages/sphinx/ext/doctest.py", line 484, in compile
+        return compile(code, name, self.type, flags, dont_inherit)
+      File "<doctest default[2]>", line 1
+        g_pickle.universe is h_pickled.universe)
+    IndentationError: unexpected indent
+**********************************************************************
+File "../../../MDAnalysis/core/groups.py", line ?, in default
+Failed example:
+    ag.groupby('masses')
+Expected:
+    {12.010999999999999: <AtomGroup with 462 atoms>,
+     14.007: <AtomGroup with 116 atoms>,
+     15.999000000000001: <AtomGroup with 134 atoms>}
+Got:
+    {1.008: <AtomGroup with 2 atoms>, 14.007: <AtomGroup with 1 atom>}
+**********************************************************************
+File "None", line ?, in default
+Failed example:
+    ag.groupby(['resnames', 'masses'])
+Expected:
+    {('ALA', 1.008): <AtomGroup with 95 atoms>,
+     ('ALA', 12.011): <AtomGroup with 57 atoms>,
+     ('ALA', 14.007): <AtomGroup with 19 atoms>,
+     ('ALA', 15.999): <AtomGroup with 19 atoms>},
+     ('ARG', 1.008): <AtomGroup with 169 atoms>,
+     ...}
+Got:
+    {('MET', 1.008): <AtomGroup with 2 atoms>, ('MET', 14.007): <AtomGroup with 1 atom>}
+**********************************************************************
+File "None", line ?, in default
+Failed example:
+    ag.groupby(['resnames', 'masses'])[]'ALA', 15.999]
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/site-packages/sphinx/ext/doctest.py", line 484, in compile
+        return compile(code, name, self.type, flags, dont_inherit)
+      File "<doctest default[0]>", line 1
+        ag.groupby(['resnames', 'masses'])[]'ALA', 15.999]
+                                                         ^
+    SyntaxError: unmatched ']'
+**********************************************************************
+File "None", line ?, in default
+Failed example:
+    sel = universe.select_atoms('resname MET GLY')
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest default[0]>", line 1, in <module>
+        sel = universe.select_atoms('resname MET GLY')
+    NameError: name 'universe' is not defined
+**********************************************************************
+File "None", line ?, in default
+Failed example:
+    sel = universe.select_atoms('resname MET or resname GLY')
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest default[0]>", line 1, in <module>
+        sel = universe.select_atoms('resname MET or resname GLY')
+    NameError: name 'universe' is not defined
+**********************************************************************
+File "None", line ?, in default
+Failed example:
+    sel = universe.select_atoms("segid DMPC and not ( name H* O* )")
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest default[0]>", line 1, in <module>
+        sel = universe.select_atoms("segid DMPC and not ( name H* O* )")
+    NameError: name 'universe' is not defined
+**********************************************************************
+File "None", line ?, in default
+Failed example:
+    sel
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest default[1]>", line 1, in <module>
+        sel
+    NameError: name 'sel' is not defined. Did you mean: 'set'?
+**********************************************************************
+File "None", line ?, in default
+Failed example:
+    universe.select_atoms("around 10 group notHO", notHO=sel)
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest default[0]>", line 1, in <module>
+        universe.select_atoms("around 10 group notHO", notHO=sel)
+    NameError: name 'universe' is not defined
+**********************************************************************
+File "None", line ?, in default
+Failed example:
+    universe.select_atoms("resname SOL and around 2.0 protein", updating=True)
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest default[0]>", line 1, in <module>
+        universe.select_atoms("resname SOL and around 2.0 protein", updating=True)
+    NameError: name 'universe' is not defined
+**********************************************************************
+File "None", line ?, in default
+Failed example:
+    universe.select_atoms("C", smarts_kwargs={"maxMatches": 100})
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest default[0]>", line 1, in <module>
+        universe.select_atoms("C", smarts_kwargs={"maxMatches": 100})
+    NameError: name 'universe' is not defined
+**********************************************************************
+File "../../../MDAnalysis/core/groups.py", line ?, in default
+Failed example:
+    ag1.indices
+Expected:
+    array([3, 3, 1, 1])
+Got:
+    array([3, 3, 2, 2, 1, 1])
+**********************************************************************
+File "../../../MDAnalysis/core/groups.py", line ?, in default
+Failed example:
+    ag3.indices  # 0 and 1 are only in ag1, 4 and 6 are only in ag2
+Expected:
+    [0, 1, 4, 6]
+Got:
+    array([0, 1, 4, 6])
+**********************************************************************
+File "../../../MDAnalysis/core/groups.py", line ?, in default
+Failed example:
+    ag.ix
+Expected:
+    array([2, 1, 2, 2, 1, 0], dtype=int64)
+Got:
+    array([2, 1, 2, 2, 1, 0])
+**********************************************************************
+File "../../../MDAnalysis/core/groups.py", line ?, in default
+Failed example:
+    ag2.ix
+Expected:
+    array([0, 1, 2], dtype=int64)
+Got:
+    array([0, 1, 2])
+**********************************************************************
+File "../../../MDAnalysis/core/groups.py", line ?, in default
+Failed example:
+    rg2.ix
+Expected:
+    array([0, 1, 2])
+Got:
+    array([2, 1, 0])
+**********************************************************************
+File "../../../MDAnalysis/core/groups.py", line ?, in default
+Failed example:
+    ag.groupby('masses')
+Expected:
+    {12.010999999999999: <AtomGroup with 462 atoms>,
+     14.007: <AtomGroup with 116 atoms>,
+     15.999000000000001: <AtomGroup with 134 atoms>}
+Got:
+    {32.06: <AtomGroup with 7 atoms>, 1.008: <AtomGroup with 1685 atoms>, 12.011: <AtomGroup with 1040 atoms>, 14.007: <AtomGroup with 289 atoms>, 15.999: <AtomGroup with 320 atoms>}
+**********************************************************************
+File "None", line ?, in default
+Failed example:
+    ag.groupby(['resnames', 'masses'])
+Expected:
+    {('ALA', 1.008): <AtomGroup with 95 atoms>,
+     ('ALA', 12.011): <AtomGroup with 57 atoms>,
+     ('ALA', 14.007): <AtomGroup with 19 atoms>,
+     ('ALA', 15.999): <AtomGroup with 19 atoms>},
+     ('ARG', 1.008): <AtomGroup with 169 atoms>,
+     ...}
+Got:
+    {('PRO', 1.008): <AtomGroup with 70 atoms>, ('PRO', 12.011): <AtomGroup with 50 atoms>, ('PRO', 14.007): <AtomGroup with 10 atoms>, ('PRO', 15.999): <AtomGroup with 10 atoms>, ('PHE', 1.008): <AtomGroup with 45 atoms>, ('PHE', 12.011): <AtomGroup with 45 atoms>, ('PHE', 14.007): <AtomGroup with 5 atoms>, ('PHE', 15.999): <AtomGroup with 5 atoms>, ('VAL', 1.008): <AtomGroup with 171 atoms>, ('VAL', 12.011): <AtomGroup with 95 atoms>, ('VAL', 14.007): <AtomGroup with 19 atoms>, ('VAL', 15.999): <AtomGroup with 19 atoms>, ('GLY', 1.008): <AtomGroup with 60 atoms>, ('GLY', 12.011): <AtomGroup with 40 atoms>, ('GLY', 14.007): <AtomGroup with 20 atoms>, ('GLY', 15.999): <AtomGroup with 21 atoms>, ('MET', 32.06): <AtomGroup with 6 atoms>, ('MET', 1.008): <AtomGroup with 56 atoms>, ('MET', 12.011): <AtomGroup with 30 atoms>, ('MET', 14.007): <AtomGroup with 6 atoms>, ('MET', 15.999): <AtomGroup with 6 atoms>, ('HSD', 1.008): <AtomGroup with 21 atoms>, ('HSD', 12.011): <AtomGroup with 18 atoms>, ('HSD', 14.007): <AtomGroup with 9 atoms>, ('HSD', 15.999): <AtomGroup with 3 atoms>, ('TYR', 1.008): <AtomGroup with 63 atoms>, ('TYR', 12.011): <AtomGroup with 63 atoms>, ('TYR', 14.007): <AtomGroup with 7 atoms>, ('TYR', 15.999): <AtomGroup with 14 atoms>, ('CYS', 32.06): <AtomGroup with 1 atom>, ('CYS', 1.008): <AtomGroup with 5 atoms>, ('CYS', 12.011): <AtomGroup with 3 atoms>, ('CYS', 14.007): <AtomGroup with 1 atom>, ('CYS', 15.999): <AtomGroup with 1 atom>, ('SER', 1.008): <AtomGroup with 25 atoms>, ('SER', 12.011): <AtomGroup with 15 atoms>, ('SER', 14.007): <AtomGroup with 5 atoms>, ('SER', 15.999): <AtomGroup with 10 atoms>, ('ASP', 1.008): <AtomGroup with 68 atoms>, ('ASP', 12.011): <AtomGroup with 68 atoms>, ('ASP', 14.007): <AtomGroup with 17 atoms>, ('ASP', 15.999): <AtomGroup with 51 atoms>, ('LEU', 1.008): <AtomGroup with 176 atoms>, ('LEU', 12.011): <AtomGroup with 96 atoms>, ('LEU', 14.007): <AtomGroup with 16 atoms>, ('LEU', 15.999): <AtomGroup with 16 atoms>, ('LYS', 1.008): <AtomGroup with 234 atoms>, ('LYS', 12.011): <AtomGroup with 108 atoms>, ('LYS', 14.007): <AtomGroup with 36 atoms>, ('LYS', 15.999): <AtomGroup with 18 atoms>, ('ARG', 1.008): <AtomGroup with 169 atoms>, ('ARG', 12.011): <AtomGroup with 78 atoms>, ('ARG', 14.007): <AtomGroup with 52 atoms>, ('ARG', 15.999): <AtomGroup with 13 atoms>, ('GLN', 1.008): <AtomGroup with 64 atoms>, ('GLN', 12.011): <AtomGroup with 40 atoms>, ('GLN', 14.007): <AtomGroup with 16 atoms>, ('GLN', 15.999): <AtomGroup with 16 atoms>, ('THR', 1.008): <AtomGroup with 77 atoms>, ('THR', 12.011): <AtomGroup with 44 atoms>, ('THR', 14.007): <AtomGroup with 11 atoms>, ('THR', 15.999): <AtomGroup with 22 atoms>, ('GLU', 1.008): <AtomGroup with 108 atoms>, ('GLU', 12.011): <AtomGroup with 90 atoms>, ('GLU', 14.007): <AtomGroup with 18 atoms>, ('GLU', 15.999): <AtomGroup with 54 atoms>, ('ASN', 1.008): <AtomGroup with 24 atoms>, ('ASN', 12.011): <AtomGroup with 16 atoms>, ('ASN', 14.007): <AtomGroup with 8 atoms>, ('ASN', 15.999): <AtomGroup with 8 atoms>, ('ILE', 1.008): <AtomGroup with 154 atoms>, ('ILE', 12.011): <AtomGroup with 84 atoms>, ('ILE', 14.007): <AtomGroup with 14 atoms>, ('ILE', 15.999): <AtomGroup with 14 atoms>, ('ALA', 1.008): <AtomGroup with 95 atoms>, ('ALA', 12.011): <AtomGroup with 57 atoms>, ('ALA', 14.007): <AtomGroup with 19 atoms>, ('ALA', 15.999): <AtomGroup with 19 atoms>}
+**********************************************************************
+File "None", line ?, in default
+Failed example:
+    ag.groupby(['resnames', 'masses'])[]'ALA', 15.999]
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/site-packages/sphinx/ext/doctest.py", line 484, in compile
+        return compile(code, name, self.type, flags, dont_inherit)
+      File "<doctest default[0]>", line 1
+        ag.groupby(['resnames', 'masses'])[]'ALA', 15.999]
+                                                         ^
+    SyntaxError: unmatched ']'
+**********************************************************************
+File "../../../MDAnalysis/core/groups.py", line ?, in default
+Failed example:
+    ag1.indices
+Expected:
+    array([3, 3, 1, 1])
+Got:
+    array([3, 3, 2, 2, 1, 1])
+**********************************************************************
+File "../../../MDAnalysis/core/groups.py", line ?, in default
+Failed example:
+    ag3.indices  # 0 and 1 are only in ag1, 4 and 6 are only in ag2
+Expected:
+    [0, 1, 4, 6]
+Got:
+    array([0, 1, 4, 6])
+**********************************************************************
+File "../../../MDAnalysis/core/groups.py", line ?, in default
+Failed example:
+    sg = u.segments[[2, 1, 2, 2, 1, 0]]
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest default[0]>", line 1, in <module>
+        sg = u.segments[[2, 1, 2, 2, 1, 0]]
+      File "/home/law/workspace/mdanalysis/package/MDAnalysis/core/groups.py", line 601, in __getitem__
+        return self._derived_class(self.ix[item], self.universe)
+    IndexError: index 2 is out of bounds for axis 0 with size 1
+**********************************************************************
+File "../../../MDAnalysis/core/groups.py", line ?, in default
+Failed example:
+    sg
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest default[1]>", line 1, in <module>
+        sg
+    NameError: name 'sg' is not defined
+**********************************************************************
+File "../../../MDAnalysis/core/groups.py", line ?, in default
+Failed example:
+    sg.ix
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest default[2]>", line 1, in <module>
+        sg.ix
+    NameError: name 'sg' is not defined
+**********************************************************************
+File "../../../MDAnalysis/core/groups.py", line ?, in default
+Failed example:
+    sg2 = sg.asunique()
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest default[3]>", line 1, in <module>
+        sg2 = sg.asunique()
+    NameError: name 'sg' is not defined
+**********************************************************************
+File "../../../MDAnalysis/core/groups.py", line ?, in default
+Failed example:
+    sg2
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest default[4]>", line 1, in <module>
+        sg2
+    NameError: name 'sg2' is not defined. Did you mean: 'ag2'?
+**********************************************************************
+File "../../../MDAnalysis/core/groups.py", line ?, in default
+Failed example:
+    sg2.ix
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest default[5]>", line 1, in <module>
+        sg2.ix
+    NameError: name 'sg2' is not defined. Did you mean: 'ag2'?
+**********************************************************************
+File "../../../MDAnalysis/core/groups.py", line ?, in default
+Failed example:
+    sg2.asunique() is sg2
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest default[6]>", line 1, in <module>
+        sg2.asunique() is sg2
+    NameError: name 'sg2' is not defined. Did you mean: 'ag2'?
+**********************************************************************
+File "../../../MDAnalysis/core/groups.py", line ?, in default
+Failed example:
+    ag.groupby('masses')
+Expected:
+    {12.010999999999999: <AtomGroup with 462 atoms>,
+     14.007: <AtomGroup with 116 atoms>,
+     15.999000000000001: <AtomGroup with 134 atoms>}
+Got:
+    {1.008: <AtomGroup with 5 atoms>, 14.007: <AtomGroup with 1 atom>}
+**********************************************************************
+File "None", line ?, in default
+Failed example:
+    ag.groupby(['resnames', 'masses'])
+Expected:
+    {('ALA', 1.008): <AtomGroup with 95 atoms>,
+     ('ALA', 12.011): <AtomGroup with 57 atoms>,
+     ('ALA', 14.007): <AtomGroup with 19 atoms>,
+     ('ALA', 15.999): <AtomGroup with 19 atoms>},
+     ('ARG', 1.008): <AtomGroup with 169 atoms>,
+     ...}
+Got:
+    {('MET', 1.008): <AtomGroup with 5 atoms>, ('MET', 14.007): <AtomGroup with 1 atom>}
+**********************************************************************
+File "None", line ?, in default
+Failed example:
+    ag.groupby(['resnames', 'masses'])[]'ALA', 15.999]
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/site-packages/sphinx/ext/doctest.py", line 484, in compile
+        return compile(code, name, self.type, flags, dont_inherit)
+      File "<doctest default[0]>", line 1
+        ag.groupby(['resnames', 'masses'])[]'ALA', 15.999]
+                                                         ^
+    SyntaxError: unmatched ']'
+**********************************************************************
+File "../../../MDAnalysis/core/groups.py", line ?, in default
+Failed example:
+    ag1.indices
+Expected:
+    array([3, 3, 1, 1])
+Got:
+    array([3, 3, 2, 2, 1, 1])
+**********************************************************************
+File "../../../MDAnalysis/core/groups.py", line ?, in default
+Failed example:
+    ag3.indices  # 0 and 1 are only in ag1, 4 and 6 are only in ag2
+Expected:
+    [0, 1, 4, 6]
+Got:
+    array([0, 1, 4, 6])
+**********************************************************************
+File "../../../MDAnalysis/core/groups.py", line ?, in default
+Failed example:
+    sg = u.segments[[2, 1, 2, 2, 1, 0]]
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest default[0]>", line 1, in <module>
+        sg = u.segments[[2, 1, 2, 2, 1, 0]]
+      File "/home/law/workspace/mdanalysis/package/MDAnalysis/core/groups.py", line 601, in __getitem__
+        return self._derived_class(self.ix[item], self.universe)
+    IndexError: index 2 is out of bounds for axis 0 with size 1
+**********************************************************************
+File "../../../MDAnalysis/core/groups.py", line ?, in default
+Failed example:
+    sg
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest default[1]>", line 1, in <module>
+        sg
+    NameError: name 'sg' is not defined
+**********************************************************************
+File "../../../MDAnalysis/core/groups.py", line ?, in default
+Failed example:
+    sg.ix
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest default[2]>", line 1, in <module>
+        sg.ix
+    NameError: name 'sg' is not defined
+**********************************************************************
+File "../../../MDAnalysis/core/groups.py", line ?, in default
+Failed example:
+    sg2 = sg.unique
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest default[3]>", line 1, in <module>
+        sg2 = sg.unique
+    NameError: name 'sg' is not defined
+**********************************************************************
+File "../../../MDAnalysis/core/groups.py", line ?, in default
+Failed example:
+    sg2
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest default[4]>", line 1, in <module>
+        sg2
+    NameError: name 'sg2' is not defined. Did you mean: 'ag2'?
+**********************************************************************
+File "../../../MDAnalysis/core/groups.py", line ?, in default
+Failed example:
+    sg2.ix
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest default[5]>", line 1, in <module>
+        sg2.ix
+    NameError: name 'sg2' is not defined. Did you mean: 'ag2'?
+**********************************************************************
+File "../../../MDAnalysis/core/groups.py", line ?, in default
+Failed example:
+    sg2.unique is sg2
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest default[6]>", line 1, in <module>
+        sg2.unique is sg2
+    NameError: name 'sg2' is not defined. Did you mean: 'ag2'?
+**********************************************************************
+1 items had failures:
+  51 of 162 in default
+162 tests in 1 items.
+111 passed and 51 failed.
+***Test Failed*** 51 failures.
+
+Document: documentation_pages/analysis/rms
+------------------------------------------
+1 items passed all tests:
+   9 tests in default
+9 tests in 1 items.
+9 passed and 0 failed.
+Test passed.
+
+Document: documentation_pages/core/universe
+-------------------------------------------
+1 items passed all tests:
+  24 tests in default
+24 tests in 1 items.
+24 passed and 0 failed.
+Test passed.
+
+Document: documentation_pages/lib/formats/libmdaxdr
+---------------------------------------------------
+**********************************************************************
+File "../docstring of MDAnalysis.lib.formats.libmdaxdr.TRRFile", line 18, in default
+Failed example:
+    with TRRFile('foo.trr') as f:
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/site-packages/sphinx/ext/doctest.py", line 484, in compile
+        return compile(code, name, self.type, flags, dont_inherit)
+      File "<doctest default[1]>", line 1
+        with TRRFile('foo.trr') as f:
+                                     ^
+    IndentationError: expected an indented block after 'with' statement on line 1
+**********************************************************************
+File "../docstring of MDAnalysis.lib.formats.libmdaxdr.TRRFile", line 19, in default
+Failed example:
+        for frame in f:
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/site-packages/sphinx/ext/doctest.py", line 484, in compile
+        return compile(code, name, self.type, flags, dont_inherit)
+      File "<doctest default[2]>", line 1
+        for frame in f:
+    IndentationError: unexpected indent
+**********************************************************************
+File "../docstring of MDAnalysis.lib.formats.libmdaxdr.TRRFile", line 20, in default
+Failed example:
+            print(frame.x)
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/site-packages/sphinx/ext/doctest.py", line 484, in compile
+        return compile(code, name, self.type, flags, dont_inherit)
+      File "<doctest default[3]>", line 1
+        print(frame.x)
+    IndentationError: unexpected indent
+**********************************************************************
+File "../docstring of MDAnalysis.lib.formats.libmdaxdr.XTCFile", line 18, in default
+Failed example:
+    with XTCFile('foo.trr') as f:
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/site-packages/sphinx/ext/doctest.py", line 484, in compile
+        return compile(code, name, self.type, flags, dont_inherit)
+      File "<doctest default[1]>", line 1
+        with XTCFile('foo.trr') as f:
+                                     ^
+    IndentationError: expected an indented block after 'with' statement on line 1
+**********************************************************************
+File "../docstring of MDAnalysis.lib.formats.libmdaxdr.XTCFile", line 19, in default
+Failed example:
+        for frame in f:
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/site-packages/sphinx/ext/doctest.py", line 484, in compile
+        return compile(code, name, self.type, flags, dont_inherit)
+      File "<doctest default[2]>", line 1
+        for frame in f:
+    IndentationError: unexpected indent
+**********************************************************************
+File "../docstring of MDAnalysis.lib.formats.libmdaxdr.XTCFile", line 20, in default
+Failed example:
+            print(frame.x)
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/site-packages/sphinx/ext/doctest.py", line 484, in compile
+        return compile(code, name, self.type, flags, dont_inherit)
+      File "<doctest default[3]>", line 1
+        print(frame.x)
+    IndentationError: unexpected indent
+**********************************************************************
+1 items had failures:
+   6 of   8 in default
+8 tests in 1 items.
+2 passed and 6 failed.
+***Test Failed*** 6 failures.
+
+Document: documentation_pages/coordinates/LAMMPS
+------------------------------------------------
+**********************************************************************
+File "../../../MDAnalysis/coordinates/LAMMPS.py", line ?, in default
+Failed example:
+    for ts in u.trajectory:
+        # analyze frame
+        if take_this_frame == True:
+            with mda.Writer('frame.data') as W:
+                W.write(u.atoms)
+            break
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest default[0]>", line 1, in <module>
+        for ts in u.trajectory:
+    NameError: name 'u' is not defined
+**********************************************************************
+1 items had failures:
+   1 of   1 in default
+1 tests in 1 items.
+0 passed and 1 failed.
+***Test Failed*** 1 failures.
+
+Document: documentation_pages/coordinates/timestep
+--------------------------------------------------
+**********************************************************************
+File "None", line ?, in default
+Failed example:
+    ts.dimensions
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest default[0]>", line 1, in <module>
+        ts.dimensions
+    NameError: name 'ts' is not defined
+**********************************************************************
+File "None", line ?, in default
+Failed example:
+    ts.triclinic_dimensions
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest default[1]>", line 1, in <module>
+        ts.triclinic_dimensions
+    NameError: name 'ts' is not defined
+**********************************************************************
+1 items had failures:
+   2 of   2 in default
+2 tests in 1 items.
+0 passed and 2 failed.
+***Test Failed*** 2 failures.
+
+Document: documentation_pages/core/topology
+-------------------------------------------
+1 items passed all tests:
+   5 tests in default
+5 tests in 1 items.
+5 passed and 0 failed.
+Test passed.
+
+Document: documentation_pages/lib/formats/libdcd
+------------------------------------------------
+**********************************************************************
+File "../docstring of MDAnalysis.lib.formats.libdcd.DCDFile", line 24, in default
+Failed example:
+    with DCDFile('foo.dcd') as f:
+Exception raised:
+    Traceback (most recent call last):
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "/home/law/anaconda3/envs/mdanalysis-dev/lib/python3.10/site-packages/sphinx/ext/doctest.py", line 484, in compile
+        return compile(code, name, self.type, flags, dont_inherit)
+      File "<doctest default[1]>", line 1
+        with DCDFile('foo.dcd') as f:
+                                     ^
+    IndentationError: expected an indented block after 'with' statement on line 1
